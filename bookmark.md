@@ -11,19 +11,11 @@ menu: Bookmark
 - [Xstream](http://x-stream.github.io/index.html) -  Serialize objects to XML and back again
 - [JAXB](https://jaxb.java.net/) - Java Architecture for XML Binding
 
-## Android
-- [Universal-Image-Loader](https://github.com/nostra13/Android-Universal-Image-Loader) - Powerful and flexible library for loading, caching and displaying images
-- [greenDAO](http://greendao-orm.com/) - greenDAO is a light and fast ORM solution that maps objects to SQLite databases
-- [EventBus](http://greenrobot.github.io/EventBus/) - Android optimized event bus that simplifies communication
-- [Transitions-Everywhere](https://github.com/andkulikov/Transitions-Everywhere) - Backport of Android Transitions API for animations
-- [Battery Historian](https://github.com/google/battery-historian) - Analyze battery consumers using Android "bugreport" files
-- [Facebook Rebound](http://facebook.github.io/rebound/) - Spring Animations for Android
-- [Dagger](http://google.github.io/dagger/) - Dagger is a fully static, compile-time dependency injection framework for both Java and Android
-- [Retrofit](http://square.github.io/retrofit/) - A type-safe HTTP client for Android and Java
-- [OkHttp](http://square.github.io/okhttp/) - An HTTP & HTTP/2 client for Android and Java applications
-- [Butter Knife](http://jakewharton.github.io/butterknife/) - Annotate fields with @BindView and a view ID for Butter Knife to find and automatically cast the corresponding view in your layout.
-- [MPAndroidChart](https://github.com/PhilJay/MPAndroidChart) - Powerful & easy to use chart library for Android
-- [Robolectric](http://robolectric.org/) - Unit test framework
+## Deep learning
+- [Tensorflow](https://www.tensorflow.org/) -An open-source software library for Machine Intelligence
+- [DSSTNE](https://github.com/amznlabs/amazon-dsstne) -Deep Scalable Sparse Tensor Network Engine (DSSTNE) is an Amazon developed library for building Deep Learning (DL) machine learning (ML) models
+- [Caffe](http://caffe.berkeleyvision.org/) -Caffe is a deep learning framework made with expression, speed, and modularity in mind
+- [neural-style](http://caffe.berkeleyvision.org/) -Torch implementation of neural style algorithm
 
 ## IOS
 - [Popping](https://github.com/schneiderandre/popping) - A collection of animation examples for iOS apps.
