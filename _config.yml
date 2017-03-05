@@ -6,13 +6,13 @@
 # 'jekyll serve'. If you change this file, please restart the server process.
 
 # Site settings
-title: I am Chuan !
+title: I am Here !
 name: zhengr
 email: zhengr@msn.com
 location: Leipzig, Germany
-company: Gfi Informatique
+company: Xfree
 company_url: http://www.eeic.com.cn
-github_url: https://github.com/zheng
+github_url: https://github.com/zhengr
 description: This is personnel website of robin zheng
 favicon: favicon.png # Image must be in assets/images
 
@@ -57,7 +57,7 @@ navs:
 
   -
     href: /open-source
-    label: Open-Source
+    label: Projects
 
   -
     href: /blog
