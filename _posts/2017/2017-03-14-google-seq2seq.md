@@ -1,3 +1,9 @@
+---
+layout: post
+title: Google 开源一个通用编码-解码框架（tf-seq2seq）
+category: Tensorflow
+tags: [Tensorflow,seq2seq]
+---
 
 ## Google 开源一个通用编码-解码框架（tf-seq2seq），  ##
 
