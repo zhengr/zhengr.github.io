@@ -5,7 +5,7 @@ category: Tensorflow
 tags: [Tensorflow,seq2seq]
 ---
 
-## Google 开源一个通用编码-解码框架（tf-seq2seq）##
+# Google 开源一个通用编码-解码框架（tf-seq2seq) #
 
 这个框架基于Tensorflow的更具体实践， 但并非是一个官方的产品。
 
@@ -19,7 +19,7 @@ A general-purpose encoder-decoder framework for Tensorflow that can be used for 
 
 当前能看到的示例只有Machine Translation（机器翻译），Text Summarization,Image Captioning示例还未推出。
 
-## 模型 ##
+# 模型 #
 
 - ModelBase
 - Seq2SeqModel
