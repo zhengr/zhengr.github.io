@@ -89,8 +89,8 @@ krejcmat/hadoop-hbase-slave          latest                                     
 krejcmat/hadoop-hbase-master         latest                                                  f2313bc4bd42        16 months ago       1.32 GB
 ```
 
-####3] Initialize Hadoop (master and slaves)
-For starting Hadoop cluster see documentation of [krejcmat/hadoop-docker](https://github.com/krejcmat/hadoop-docker/blob/master/README.md#3-initialize-hadoop-master-and-slaves).
+####3] Initialize Hadoop (master and slaves) 初始化Hadoop （主节点和从节点）
+
 
 If Hadoop is runnig go to next step.
 
