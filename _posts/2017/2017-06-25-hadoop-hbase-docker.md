@@ -17,7 +17,9 @@ tags:
 
 | system       | version   | 
 | ----------------|:----------:| 
-| HBase        |  1.2.4    |
+| HBase        | 1.2.4    |
+| Docker server  | 17.03.0-ce |
+
 
 ######文件目录 
 ```
