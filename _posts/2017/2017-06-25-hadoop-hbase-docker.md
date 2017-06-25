@@ -273,7 +273,7 @@ hbase(main):001:0> status
 ```
 ######Example of creating table and adding some values
 ```
-$ create 'album','label','image'
+hbase(main):014:1> create 'album','label','image'
 ```
 Now you have a table called album, with a label, and an image family. These families are “static” like the columns in the RDBMS world.
 
