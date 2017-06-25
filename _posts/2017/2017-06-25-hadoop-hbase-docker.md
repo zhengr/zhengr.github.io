@@ -1,5 +1,11 @@
 ---
 published: false
+layout: post
+category: Bigdata
+tags:
+  - Hbase
+  - Docker
+  - Hadoop
 ---
 
 # 单节点基于Docker快速虚拟部署Hbase和Hadoop集群
