@@ -82,14 +82,15 @@ $ docker pull krejcmat/hadoop-hbase-slave:latest
 ```
 
 ######Check images
+```bash
+root@ubuntu:~# docker images
+REPOSITORY                           TAG                                                     IMAGE ID            CREATED             SIZE
+krejcmat/hadoop-master               latest                                                  5089e2ba0492        16 months ago       671 MB
+krejcmat/hadoop-slave                latest                                                  f41baab63271        16 months ago       671 MB
+krejcmat/hadoop-hbase-slave          latest                                                  f7f8427fb25f        16 months ago       1.32 GB
+krejcmat/hadoop-hbase-master         latest                                                  f2313bc4bd42        16 months ago       1.32 GB
 ```
-$ docker images
 
-krejcmat/hadoop-hbase-master               latest              2f86a3daef76        48 minutes ago           1.091 GB
-krejcmat/hadoop-hbase-slave                latest              ed119b77ecdf        53 minutes ago           1.091 GB
-krejcmat/hadoop-hbase-base                 latest              00fd6c19004f        58 minutes ago           1.091 GB
-
-```
 
 ####3] Initialize Hadoop (master and slaves)
 For starting Hadoop cluster see documentation of [krejcmat/hadoop-docker](https://github.com/krejcmat/hadoop-docker/blob/master/README.md#3-initialize-hadoop-master-and-slaves).
