@@ -62,11 +62,15 @@ $ tree
 
 ```
 
-###Usage
-####1] Clone git repository
-```
-$ git clone https://github.com/krejcmat/hadoop-hbase-docker.git
-$ cd hadoop-hbase-docker
+####1] Clone git repository 克隆项目库到服务器
+```bash
+root@ubuntu:~# ls
+configure-members.sh  hadoop-hbase-docker  start-container.sh
+root@ubuntu:~# cd hadoop-hbase-docker
+-bash: cd: cd: No such file or directory
+root@ubuntu:~# cd hadoop-hbase-docker
+root@ubuntu:~/hadoop-hbase-docker# ls
+build-image.sh  hadoop-hbase-base  hadoop-hbase-master  hadoop-hbase-slave  README.md  resize-cluster.sh  start-container.sh
 ```
 
 ####2] Get docker images 获得Docker镜像
