@@ -73,19 +73,13 @@ root@ubuntu:~/hadoop-hbase-docker# ls
 build-image.sh  hadoop-hbase-base  hadoop-hbase-master  hadoop-hbase-slave  README.md  resize-cluster.sh  start-container.sh
 ```
 
-####2] Get docker images 获得Docker镜像
-Two options how to get images are available. By pulling images directly from Docker official repository or build from Dockerfiles and sources files(see Dockerfile in each hadoop-hbase-* directory). Builds on DockerHub are automatically created by pull trigger or GitHub trigger after update Dockerfiles. Triggers are setuped for tag:latest. Below is example of stable version krejcmat/hadoop-hbase-<>:0.1. Version krejcmat/hadoop-hbase-<>:latest is compiled on DockerHub from master branche on GitHub.
-
-######a) Download from Docker hub 从Docker Hub 直接Pull
-```
+####2] Get docker images 获得Docker镜像，从Docker Hub 直接Pull
+```bash
 $ docker pull krejcmat/hadoop-hbase-master:latest
 $ docker pull krejcmat/hadoop-hbase-slave:latest
 ```
 
-
-```
-
-######Check images
+######Check images 检查镜像
 ```bash
 root@ubuntu:~# docker images
 REPOSITORY                           TAG                                                     IMAGE ID            CREATED             SIZE
@@ -94,7 +88,6 @@ krejcmat/hadoop-slave                latest                                     
 krejcmat/hadoop-hbase-slave          latest                                                  f7f8427fb25f        16 months ago       1.32 GB
 krejcmat/hadoop-hbase-master         latest                                                  f2313bc4bd42        16 months ago       1.32 GB
 ```
-
 
 ####3] Initialize Hadoop (master and slaves)
 For starting Hadoop cluster see documentation of [krejcmat/hadoop-docker](https://github.com/krejcmat/hadoop-docker/blob/master/README.md#3-initialize-hadoop-master-and-slaves).
