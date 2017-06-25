@@ -8,7 +8,7 @@ tags:
   - Hadoop
 ---
 
-# 单节点基于Docker快速虚拟部署Hbase和Hadoop集群
+# 基于Docker单机快速部署Hbase和Hadoop集群
 
 采用krejcmat/hadoop-hbase-docker项目成果，感谢原作者
 
