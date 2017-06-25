@@ -2,10 +2,11 @@
 published: false
 ---
 
-# hadoop-hbase-docker
+# 单节点基于Docker快速虚拟部署Hbase和Hadoop集群
+
 Quickly build arbitrary size Hadoop cluster based on Docker includes HBase database system
 ------
-Core of this project is based on [krejcmat/hadoop-docker](https://github.com/krejcmat/hadoop-hbase-docker/blob/master/README.md) images. Please check details on mentioned site. Dockerfile sources of this project extends Hadoop docker ([krejcmat/hadoop-docker](https://github.com/krejcmat/hadoop-hbase-docker/blob/master/README.md)) images by few layers with HBase installation and configuration. As handler of HBase native Zookeeper is used. For large clusters is highly recomanded to use external Zookeeper management(not include).
+
 
 ######Version of products
 | system          | version    | 
