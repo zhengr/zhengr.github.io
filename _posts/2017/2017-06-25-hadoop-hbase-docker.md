@@ -75,8 +75,8 @@ build-image.sh  hadoop-hbase-base  hadoop-hbase-master  hadoop-hbase-slave  READ
 
 ####2] Get docker images 获得Docker镜像，从Docker Hub 直接Pull
 ```bash
-$ docker pull krejcmat/hadoop-hbase-master:latest
-$ docker pull krejcmat/hadoop-hbase-slave:latest
+root@ubuntu:~# docker pull krejcmat/hadoop-hbase-master:latest
+root@ubuntu:~# docker pull krejcmat/hadoop-hbase-slave:latest
 ```
 
 ######Check images 检查镜像
@@ -91,14 +91,166 @@ krejcmat/hadoop-hbase-master         latest                                     
 
 ####3] Initialize Hadoop (master and slaves) 初始化Hadoop （主节点和从节点）
 
+######a)run containers
+start-container.sh 脚本第一个参数是镜像tag, 第二个是节点数量， 我们采用latest及三个节点
 
-If Hadoop is runnig go to next step.
+```bash
+root@ubuntu:~/hadoop-hbase-docker#  ./start-container.sh latest 3
+
+start master container...
+start slave1 container...
+start slave2 container...
+```
+
+#####Check status 检查集群情况
+######查看Docker容器情况
+
+```bash
+root@ubuntu:~/hadoop-hbase-docker# docker ps -a
+CONTAINER ID        IMAGE                                                                               COMMAND                  CREATED             STATUS                      PORTS                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            NAMES
+cde44b48b3b8        andypetrella/spark-notebook:0.7.0-scala-2.10.6-spark-2.1.1-hadoop-2.7.2-with-hive   "bin/spark-notebook"     16 hours ago        Exited (129) 15 hours ago                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    jovial_kilby
+7f0884c5f835        krejcmat/hadoop-hbase-slave:latest                                                  "/bin/sh -c ''/roo..."   41 hours ago        Up 41 hours                 0.0.0.0:32919->22/tcp, 0.0.0.0:32918->7373/tcp, 0.0.0.0:32917->7946/tcp, 0.0.0.0:32916->8030/tcp, 0.0.0.0:32915->8031/tcp, 0.0.0.0:32914->8032/tcp, 0.0.0.0:32913->8033/tcp, 0.0.0.0:32912->8040/tcp, 0.0.0.0:32911->8042/tcp, 0.0.0.0:32910->8060/tcp, 0.0.0.0:32909->8088/tcp, 0.0.0.0:32908->9000/tcp, 0.0.0.0:32907->50010/tcp, 0.0.0.0:32906->50020/tcp, 0.0.0.0:32905->50060/tcp, 0.0.0.0:32904->50070/tcp, 0.0.0.0:32903->50075/tcp, 0.0.0.0:32902->50090/tcp, 0.0.0.0:32901->50475/tcp   slave2.krejcmat.com
+c6ce615a8a67        krejcmat/hadoop-hbase-slave:latest                                                  "/bin/sh -c ''/roo..."   41 hours ago        Up 41 hours                 0.0.0.0:32900->22/tcp, 0.0.0.0:32899->7373/tcp, 0.0.0.0:32898->7946/tcp, 0.0.0.0:32897->8030/tcp, 0.0.0.0:32896->8031/tcp, 0.0.0.0:32895->8032/tcp, 0.0.0.0:32894->8033/tcp, 0.0.0.0:32893->8040/tcp, 0.0.0.0:32892->8042/tcp, 0.0.0.0:32891->8060/tcp, 0.0.0.0:32890->8088/tcp, 0.0.0.0:32889->9000/tcp, 0.0.0.0:32888->50010/tcp, 0.0.0.0:32887->50020/tcp, 0.0.0.0:32886->50060/tcp, 0.0.0.0:32885->50070/tcp, 0.0.0.0:32884->50075/tcp, 0.0.0.0:32883->50090/tcp, 0.0.0.0:32882->50475/tcp   slave1.krejcmat.com
+164b4915b678        krejcmat/hadoop-hbase-master:latest                                                 "/bin/sh -c ''/roo..."   41 hours ago        Up 41 hours                 0.0.0.0:32881->22/tcp, 0.0.0.0:32880->7373/tcp, 0.0.0.0:32879->7946/tcp, 0.0.0.0:32878->8030/tcp, 0.0.0.0:32877->8031/tcp, 0.0.0.0:32876->8032/tcp, 0.0.0.0:32875->8033/tcp, 0.0.0.0:32874->8040/tcp, 0.0.0.0:32873->8042/tcp, 0.0.0.0:32872->8060/tcp, 0.0.0.0:32871->8088/tcp, 0.0.0.0:32870->9000/tcp, 0.0.0.0:32869->50010/tcp, 0.0.0.0:32868->50020/tcp, 0.0.0.0:32867->50060/tcp, 0.0.0.0:32866->50070/tcp, 0.0.0.0:32865->50075/tcp, 0.0.0.0:32864->50090/tcp, 0.0.0.0:32863->50475/tcp   master.krejcmat.com
+90c339403a66        monitoringartist/zabbix-db-mariadb:latest                                           "/run.sh"                2 months ago        Up 3 weeks                  0.0.0.0:3306->3306/tcp                                                                                                                                                                                                                                                                                                                                                                                                                                                                           zabbix-db
+c724e2c7d6a5        tensorflow/tensorflow                                                               "/run_jupyter.sh"        3 months ago        Up 3 weeks                  6006/tcp, 0.0.0.0:8888->8888/tcp                                                                                                                                                                                                                                                                                                                                                                                                                                                                 amazing_einstein
+```
+######进入容器master.krejcmat.com Master节点
+
+```bash
+root@ubuntu:~/hadoop-hbase-docker# docker exec -it  master.krejcmat.com  bash
+```
+######Check members of cluster  查看集群成员
+```bash
+root@master:~# serf members
+master.krejcmat.com  172.17.0.3:7946  alive
+slave1.krejcmat.com  172.17.0.5:7946  alive
+slave2.krejcmat.com  172.17.0.6:7946  alive
+```
+
+#####b)Run Hadoop cluster 启动Hadoop集群
+######Creating configures file for Hadoop and Hbase(includes zookeeper)  
+```bash
+root@master:~# ./configure-slaves.sh
+
+Warning: Permanently added 'slave2.krejcmat.com,172.17.0.6' (ECDSA) to the list of known hosts.
+slaves                                                                                                                                                                   100%   60     0.1KB/s   00:00
+Warning: Permanently added 'slave2.krejcmat.com,172.17.0.6' (ECDSA) to the list of known hosts.
+slaves                                                                                                                                                                   100%   60     0.1KB/s   00:00
+Warning: Permanently added 'slave2.krejcmat.com,172.17.0.6' (ECDSA) to the list of known hosts.
+hbase-site.xml                                                                                                                                                           100% 1750     1.7KB/s   00:00
+Warning: Permanently added 'slave1.krejcmat.com,172.17.0.5' (ECDSA) to the list of known hosts.
+slaves                                                                                                                                                                   100%   60     0.1KB/s   00:00
+Warning: Permanently added 'slave1.krejcmat.com,172.17.0.5' (ECDSA) to the list of known hosts.
+slaves                                                                                                                                                                   100%   60     0.1KB/s   00:00
+Warning: Permanently added 'slave1.krejcmat.com,172.17.0.5' (ECDSA) to the list of known hosts.
+hbase-site.xml                                                                                                                                                           100% 1750     1.7KB/s   00:00
+Warning: Permanently added 'master.krejcmat.com,172.17.0.3' (ECDSA) to the list of known hosts.
+slaves                                                                                                                                                                   100%   60     0.1KB/s   00:00
+Warning: Permanently added 'master.krejcmat.com,172.17.0.3' (ECDSA) to the list of known hosts.
+slaves                                                                                                                                                                   100%   60     0.1KB/s   00:00
+Warning: Permanently added 'master.krejcmat.com,172.17.0.3' (ECDSA) to the list of known hosts.
+hbase-site.xml                                                                                                                                                           100% 1750     1.7KB/s   00:00
+  
+```
+
+######Starting Hadoop 启动Hadoop
+```
+root@master:~# ./start-hadoop.sh 
+ #For stop Hadoop ./stop-hadoop.sh
+```
+
+######Print Java processes
+```bash
+root@master:~# jps
+4314 DataNode
+4640 ResourceManager
+5499 HRegionServer
+16242 Main
+26091 Jps
+4477 SecondaryNameNode
+5274 HQuorumPeer
+5371 HMaster
+6698 Main
+4187 NameNode
+
+```
+
+######Print status of Hadoop cluster 
+```
+root@master:~# hdfs dfsadmin -report
+Configured Capacity: 31304097792 (29.15 GB)
+Present Capacity: 23839765476 (22.20 GB)
+DFS Remaining: 23839056868 (22.20 GB)
+DFS Used: 708608 (692 KB)
+DFS Used%: 0.00%
+Under replicated blocks: 0
+Blocks with corrupt replicas: 0
+Missing blocks: 0
+Missing blocks (with replication factor 1): 0
+
+-------------------------------------------------
+Live datanodes (3):
+
+Name: 172.17.0.5:50010 (slave1.krejcmat.com)
+Hostname: slave1.krejcmat.com
+Decommission Status : Normal
+Configured Capacity: 10434699264 (9.72 GB)
+DFS Used: 233472 (228 KB)
+Non DFS Used: 2484862644 (2.31 GB)
+DFS Remaining: 7949603148 (7.40 GB)
+DFS Used%: 0.00%
+DFS Remaining%: 76.18%
+Configured Cache Capacity: 0 (0 B)
+Cache Used: 0 (0 B)
+Cache Remaining: 0 (0 B)
+Cache Used%: 100.00%
+Cache Remaining%: 0.00%
+Xceivers: 9
+Last contact: Sun Jun 25 14:52:10 UTC 2017
+
+
+Name: 172.17.0.6:50010 (slave2.krejcmat.com)
+Hostname: slave2.krejcmat.com
+Decommission Status : Normal
+Configured Capacity: 10434699264 (9.72 GB)
+DFS Used: 233472 (228 KB)
+Non DFS Used: 2484608692 (2.31 GB)
+DFS Remaining: 7949857100 (7.40 GB)
+DFS Used%: 0.00%
+DFS Remaining%: 76.19%
+Configured Cache Capacity: 0 (0 B)
+Cache Used: 0 (0 B)
+Cache Remaining: 0 (0 B)
+Cache Used%: 100.00%
+Cache Remaining%: 0.00%
+Xceivers: 9
+Last contact: Sun Jun 25 14:52:10 UTC 2017
+
+
+Name: 172.17.0.3:50010 (master.krejcmat.com)
+Hostname: master.krejcmat.com
+Decommission Status : Normal
+Configured Capacity: 10434699264 (9.72 GB)
+DFS Used: 241664 (236 KB)
+Non DFS Used: 2494860980 (2.32 GB)
+DFS Remaining: 7939596620 (7.39 GB)
+DFS Used%: 0.00%
+DFS Remaining%: 76.09%
+Configured Cache Capacity: 0 (0 B)
+Cache Used: 0 (0 B)
+Cache Remaining: 0 (0 B)
+Cache Used%: 100.00%
+Cache Remaining%: 0.00%
+Xceivers: 9
+Last contact: Sun Jun 25 14:52:10 UTC 2017
+
+```
 
 ####4] Initialize Hbase database and run Hbase shell
 ######Start HBase
 ```
-$ cd ~
-$ ./start-hbase.sh
+root@master:~# ./start-hbase.sh
 
 (hbase(main):001:0>)
 ```
