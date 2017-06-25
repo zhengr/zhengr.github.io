@@ -5,6 +5,7 @@ tags:
   - Hbase
   - Docker
   - Hadoop
+published: true
 ---
 
 ## 基于Docker单机快速部署Hbase和Hadoop集群
@@ -247,7 +248,7 @@ Last contact: Sun Jun 25 14:52:10 UTC 2017
 
 ```
 
-### 4] Initialize Hbase database and run Hbase shell  初始化Hbase已经执行 Hbase shell
+### 4] Initialize Hbase database and run Hbase shell  初始化Hbase并执行 Hbase shell
 ######Start HBase
 ```bash
 root@master:~# ./start-hbase.sh
@@ -295,4 +296,3 @@ COLUMN                                              CELL
  label:text                                         timestamp=1498252164411, value=Family album
 5 row(s) in 0.4150 seconds
 ```
-
