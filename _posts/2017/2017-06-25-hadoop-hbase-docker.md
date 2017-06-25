@@ -248,7 +248,7 @@ Last contact: Sun Jun 25 14:52:10 UTC 2017
 
 ```
 
-### 4] Initialize Hbase database and run Hbase shell  初始化Hbase并执行 Hbase shell
+### 4] Initialize Hbase database and run Hbase shell  初始化Hbase并执行Hbase shell
 ######Start HBase
 ```bash
 root@master:~# ./start-hbase.sh
