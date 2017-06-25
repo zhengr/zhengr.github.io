@@ -20,10 +20,9 @@ tags:
 | HBase        | 1.2.4     |
 | Docker       | 17.03.0-ce  | 
 
-######文件目录 
+######repository 文件目录 
 ```
 $ tree
-
 .
 ├── hadoop-hbase-base
 │   ├── Dockerfile
