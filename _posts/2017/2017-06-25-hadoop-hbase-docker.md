@@ -64,7 +64,7 @@ $ tree
 
 ```
 
-### 1] Clone git repository 克隆项目库到服务器
+### 1] 克隆项目库到服务器
 ```bash
 root@ubuntu:~# ls
 configure-members.sh  hadoop-hbase-docker  start-container.sh
@@ -75,7 +75,7 @@ root@ubuntu:~/hadoop-hbase-docker# ls
 build-image.sh  hadoop-hbase-base  hadoop-hbase-master  hadoop-hbase-slave  README.md  resize-cluster.sh  start-container.sh
 ```
 
-### 2] Get docker images 获得Docker镜像，从Docker Hub 直接Pull
+### 2] 获得Docker镜像，从Docker Hub 直接Pull
 ```bash
 root@ubuntu:~# docker pull krejcmat/hadoop-hbase-master:latest
 root@ubuntu:~# docker pull krejcmat/hadoop-hbase-slave:latest
@@ -90,7 +90,7 @@ krejcmat/hadoop-hbase-slave          latest                                     
 krejcmat/hadoop-hbase-master         latest                                                  f2313bc4bd42        16 months ago       1.32 GB
 ```
 
-### 3] Initialize Hadoop (master and slaves) 初始化Hadoop （主节点和从节点）
+### 3] 初始化Hadoop （主节点和从节点）
 
 ######a)run containers
 start-container.sh 脚本第一个参数是镜像tag, 第二个是节点数量， 我们采用latest及三个节点
@@ -248,7 +248,7 @@ Last contact: Sun Jun 25 14:52:10 UTC 2017
 
 ```
 
-### 4] Initialize Hbase database and run Hbase shell  初始化Hbase并执行Hbase shell
+### 4] 初始化Hbase并执行Hbase shell
 ######Start HBase
 ```bash
 root@master:~# ./start-hbase.sh
