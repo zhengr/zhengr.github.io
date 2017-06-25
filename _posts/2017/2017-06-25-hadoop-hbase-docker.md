@@ -279,23 +279,22 @@ Now you have a table called album, with a label, and an image family. These fami
 
 Add some data:
 ```
-$ put 'album','label1','label:size','10'
-$ put 'album','label1','label:color','255:255:255'
-$ put 'album','label1','label:text','Family album'
-$ put 'album','label1','image:name','holiday'
-$ put 'album','label1','image:source','/tmp/pic1.jpg'
+hbase(main):016:1> put 'album','label1','label:size','10'
+hbase(main):017:1> put 'album','label1','label:color','255:255:255'
+hbase(main):018:1> put 'album','label1','label:text','Family album'
+hbase(main):019:1> put 'album','label1','image:name','holiday'
+hbase(main):020:1> put 'album','label1','image:source','/tmp/pic1.jpg'
 ```
 
 Print table album,label1.
 ```
-$get 'album','label1'
-
+hbase(main):002:0* get 'album','label1'
 COLUMN                                              CELL
-image:name                                          timestamp=1454590694743, value=holiday
-image:source                                        timestamp=1454590759183, value=/tmp/pic1.jpg
-label:color                                         timestamp=1454590554725, value=255:255:255
-label:size                                          timestamp=1454590535642, value=10
-label:text                                          timestamp=1454590583786, value=Family album
-6 row(s) in 0.0320 seconds
+ image:name                                         timestamp=1498252174789, value=holiday
+ image:source                                       timestamp=1498252186627, value=/tmp/pic1.jpg
+ label:color                                        timestamp=1498252152684, value=255:255:255
+ label:size                                         timestamp=1498252138387, value=10
+ label:text                                         timestamp=1498252164411, value=Family album
+5 row(s) in 0.4150 seconds
 ```
 
