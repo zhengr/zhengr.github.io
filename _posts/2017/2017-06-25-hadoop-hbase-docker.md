@@ -10,12 +10,13 @@ tags:
 
 # 基于Docker单机快速部署Hbase和Hadoop集群
 
-采用krejcmat/hadoop-hbase-docker项目成果，感谢原作者
+采用krejcmat/hadoop-hbase-docker项目
 
 ######相关产品版本
-| system          | version    | 
+
+| system       | version   | 
 | ----------------|:----------:| 
-| HBase           | 1.2.4      |
+| HBase        |  1.2.4    |
 
 ######文件目录 
 ```
