@@ -10,19 +10,14 @@ tags:
 
 # 单节点基于Docker快速虚拟部署Hbase和Hadoop集群
 
-Quickly build arbitrary size Hadoop cluster based on Docker includes HBase database system
-------
+采用krejcmat/hadoop-hbase-docker项目成果，感谢原作者
 
-
-######Version of products
+######相关产品版本
 | system          | version    | 
 | ----------------|:----------:| 
 | HBase           | 1.2.4      |
 
-Used versions of Hadoop and HBase are officially compatible - fully tested.
-As handler of HBase native Zookeeper is used. For large clusters is highly recomanded to use external Zookeeper management(not include).
-
-######See file structure of project 
+######文件目录 
 ```
 $ tree
 
@@ -74,20 +69,16 @@ $ git clone https://github.com/krejcmat/hadoop-hbase-docker.git
 $ cd hadoop-hbase-docker
 ```
 
-####2] Get docker images 
+####2] Get docker images 获得Docker镜像
 Two options how to get images are available. By pulling images directly from Docker official repository or build from Dockerfiles and sources files(see Dockerfile in each hadoop-hbase-* directory). Builds on DockerHub are automatically created by pull trigger or GitHub trigger after update Dockerfiles. Triggers are setuped for tag:latest. Below is example of stable version krejcmat/hadoop-hbase-<>:0.1. Version krejcmat/hadoop-hbase-<>:latest is compiled on DockerHub from master branche on GitHub.
 
-######a) Download from Docker hub
+######a) Download from Docker hub 从Docker Hub 直接Pull
 ```
 $ docker pull krejcmat/hadoop-hbase-master:latest
 $ docker pull krejcmat/hadoop-hbase-slave:latest
 ```
 
-######b)Build from sources(Dockerfiles)
-Firstly build Hadoop dockere images [krejcmat/hadoop-docker](https://github.com/krejcmat/hadoop-docker).
-The first argument of the script for bulilds is must be folder with Dockerfile. Tag for sources is **latest**
-```
-$ ./build-image.sh hadoop-hbase-base
+
 ```
 
 ######Check images
