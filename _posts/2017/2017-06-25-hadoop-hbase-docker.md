@@ -71,6 +71,7 @@ root@ubuntu:~# ls
 configure-members.sh  hadoop-hbase-docker  start-container.sh
 root@ubuntu:~# cd hadoop-hbase-docker
 -bash: cd: cd: No such file or directory
+root@ubuntu:~# git clone https://github.com/krejcmat/hadoop-hbase-docker.git
 root@ubuntu:~# cd hadoop-hbase-docker
 root@ubuntu:~/hadoop-hbase-docker# ls
 build-image.sh  hadoop-hbase-base  hadoop-hbase-master  hadoop-hbase-slave  README.md  resize-cluster.sh  start-container.sh
