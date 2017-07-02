@@ -9,12 +9,10 @@ tags:
 published: true
 ---
 
-
 ##   Oracle NoSQL database
 
 
-
---Oracle于2011年发布NoSQL,它是基于Oracle Berkeley DB Java Edition的新键-值存储系统,设计时考虑到了高扩展性和高可用性，并可部署于多个互相复制的节点上，以便进行快速故障切换及负载均衡。
+Oracle于2011年发布NoSQL,它是基于Oracle Berkeley DB Java Edition的新键-值存储系统,设计时考虑到了高扩展性和高可用性，并可部署于多个互相复制的节点上，以便进行快速故障切换及负载均衡。
 
 ### 1、特性
 
@@ -25,13 +23,11 @@ Key/Value式的存储。
 #### 扩展性强
 
 支持自动地基于hash函数的数据分片策略。
-
 提供基于数据节点拓扑结构和访问延迟的智能控制，以提供最佳的数据访问性能。
 
 #### 行为可预测性
 
 提供ACID的事务性支持，并且支持基于全局和单个操作的事务级别设置。
-
 通过B-tree数据结构构成的Cache层和高效的查询调度机制，提供可控的请求延迟。          
 
 #### 高可用性
@@ -171,7 +167,3 @@ Verify:         Rep Node [rg3-rn3]      Status: RUNNING,REPLICA sequenceNumber:2
 Verification complete, no violations.
 
 ```
-
-
-
-
