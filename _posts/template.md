@@ -1,9 +1,14 @@
 ---
 layout: post
-title: Machine Learning with Financial Data
-category: markdown
-tags: [markdown]
+title:  基于Docker单机快速部署Hbase和Hadoop集群
+category: Bigdata
+tags:
+  - Hbase
+  - Docker
+  - Hadoop
+published: true
 ---
+
 
 Quick note about Mongoose. 
 
