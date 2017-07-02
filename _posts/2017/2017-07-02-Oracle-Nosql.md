@@ -11,6 +11,8 @@ published: true
 
 ## Oracle NoSQL简介
 
+
+
 Oracle于2011年发布NoSQL,它是基于Oracle Berkeley DB Java Edition的新键-值存储系统,设计时考虑到了高扩展性和高可用性，并可部署于多个互相复制的节点上，以便进行快速故障切换及负载均衡。
 
 ### 1、特性
