@@ -42,6 +42,10 @@ kramdown:
   input: GFM
   enable_coderay: true
 
+# Share
+social-share: true
+social-share-items: ['wechat', 'weibo', 'douban', 'twitter']
+
 # Disque
 disque: www-eeic-com.disqus.com
 
