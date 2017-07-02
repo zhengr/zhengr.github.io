@@ -10,7 +10,7 @@ published: true
 ---
 
 
-## Oracle NoSQL简介
+##   Oracle NoSQL database
 
 
 
