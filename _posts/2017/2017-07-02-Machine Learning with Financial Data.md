@@ -1,1 +1,9 @@
+---
+layout: post
+title: Machine Learning with Financial Data
+category: markdown
+tags: [markdown]
+---
+
+
 [https://github.com/zhengr/zhengr.github.io/blob/master/_posts/2017/Machine%20Learning%20with%20Financial%20Data.ipynb](https://github.com/zhengr/zhengr.github.io/blob/master/_posts/2017/Machine%20Learning%20with%20Financial%20Data.ipynb)
