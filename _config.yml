@@ -43,7 +43,7 @@ kramdown:
   enable_coderay: true
 
 # Disque
-disque: disqus_NRE0qvAdGC
+disque: www-eeic-com.disqus.com
 
 # Pagination
 paginate: 10
