@@ -43,7 +43,7 @@ kramdown:
   enable_coderay: true
 
 # Disque
-disque: zhengr
+disque: disqus_NRE0qvAdGC
 
 # Pagination
 paginate: 10
