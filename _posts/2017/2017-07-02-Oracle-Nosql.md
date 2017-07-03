@@ -5,6 +5,8 @@ category: Bigdata
 tags: [NoSQL, Oracle,KEY-VALU]
 ---
 
+JDBC stands for **Java Database Connectivity**. It is a standard Java API for database-independent connectivity between the Java programming language and a wide range of databases.
+
 ## Oracle NoSQL database
 
 
