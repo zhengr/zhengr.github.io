@@ -6,7 +6,6 @@ tags:
   - NoSQL
   - Oracle
   - KEY-VALUE
-published: true
 ---
 
 ## Oracle NoSQL database
