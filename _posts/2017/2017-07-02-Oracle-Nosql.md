@@ -2,10 +2,7 @@
 layout: post
 title:  Oracle NoSQL Database简介
 category: Bigdata
-tags:
-  - NoSQL
-  - Oracle
-  - KEY-VALUE
+tags: [NoSQL, Oracle,KEY-VALU]
 ---
 
 ## Oracle NoSQL database ##
