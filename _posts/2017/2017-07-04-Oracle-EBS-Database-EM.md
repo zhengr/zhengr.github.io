@@ -11,8 +11,8 @@ tags: [Oracle,EBS,EM,R12]
 Oracle EBS R12.1.1使用的是Oracle Database 11R1数据库,但是Oracle Database 11R1无法用像10g以前的版本那样的通过文件就可以打开alter<SID>.log,只能通过EM查看alter，而在安装EBS R12时，默认是
 不安装EM.导致无法查看Alter的信息.
 
-### 下面就介绍如何手工启动EM:
-#### 一、检查参数remote_login_passwordfile是否为EXCLUSIVE或SHARED
+下面就介绍如何手工启动EM:
+### 一、检查参数remote_login_passwordfile是否为EXCLUSIVE或SHARED
 ##### 1).以sys用户登录
 
 ```
@@ -30,7 +30,7 @@ SQL>alter system set remote_login_passwordfile='exclusive' scope=spfile;
 ```
 注:然后重启Database;
 
-#### 二、检查是否存在用户被授予了sysdba或者sysoper权限
+### 二、检查是否存在用户被授予了sysdba或者sysoper权限
 
 ```
 SQL> select * from v$pwfile_users;
@@ -43,7 +43,7 @@ SYS TRUE TRUE FALSE
 ```
 orapwd file=$ORACLE_HOME/dbs/orapw$ORACLE_SID password=sys entries=5;
 ```
-#### 三、删除默认安装测试版的EM和重建EM
+### 三、删除默认安装测试版的EM和重建EM
 
 ##### 1).Delete DB Control Repository
 ```
@@ -92,7 +92,7 @@ Outgoing Mail (SMTP) server for notifications ...............
 Do you wish to continue? [yes(Y)/no(N)]: Y
 ```
 
-#### 四、启动/关闭EM
+### 四、启动/关闭EM
 ```
 $emctl start/stop dbconsole
 $ emctl start dbconsole
