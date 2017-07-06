@@ -15,9 +15,9 @@ Download and extract the Node.js "Linux Binaries" package. For example, if you d
 ```
 cd /opt
 tar -Jxf node-v6.9.4-linux-x64.tar.xz
-
+```
 Set PATH to include Node.js:
-
+```
 export PATH=/opt/node-v6.9.4-linux-x64/bin:$PATH
 ```
 
