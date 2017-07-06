@@ -81,16 +81,6 @@ npm config set python /usr/bin/python2.7
 npm install oracledb
 ```
 
-```sql
-CREATE TABLE NODE_TEST
-(
-  A INTEGER,
-  B INTEGER
-);
-INSERT INTO NODE_TEST(A, B) VALUES (1, 2);
-INSERT INTO NODE_TEST(A, B) VALUES (3, 4);
-```
-
 编辑select.js
 
 ```js
