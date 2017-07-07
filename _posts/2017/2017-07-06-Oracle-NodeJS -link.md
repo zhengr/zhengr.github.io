@@ -81,7 +81,7 @@ npm config set python /usr/bin/python2.7
 npm install oracledb
 ```
 
-编辑select.js
+编辑 [select.js](http://zhengr.github.io/_posts/2017/select.js )
 
 ```js
 var oracledb = require('oracledb');
