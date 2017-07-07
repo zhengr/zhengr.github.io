@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  Oracle-Node.JS 测试
-category: Node.JS
-tags: [Oracle,Node.JS]
+title:  Oracle Node.js 连接Oracle ERP数据库测试
+category: Node.js
+tags: [Oracle,Node.js]
 ---
 
 
