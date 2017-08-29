@@ -2,12 +2,7 @@
 layout: post
 title:  Hyperledger Sawtooth 在供应链可视化案例
 category: Blockchain
-tags:
-  - Hyperledger 
-  - Blockchain
-  - Trace
-  - Supply chain
-  - published: true
+tags: [Hyperledger,Blockchain,Trace,Supply chain]
 ---
 ## 海鲜供应跟踪只是众多用例中的一种
 
