@@ -1,11 +1,12 @@
 ---
 layout: post
-title:  基于Docker单机快速部署Hbase和Hadoop集群
+title:  Hyperledger Sawtooth 在供应链可视化案例
 category: Bigdata
 tags:
-  - Hbase
-  - Docker
-  - Hadoop
+  - Hyperledger 
+  - Blockchain
+  - Trace
+  - Supply chain
   - published: true
 ---
 ## 海鲜供应跟踪只是众多用例中的一种
