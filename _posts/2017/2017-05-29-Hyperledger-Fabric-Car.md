@@ -13,11 +13,11 @@ tags: [Hyperledger,Blockchain,Car,Supply chain]
 
 下面fabcar这个chaincode里car有四属性
 
-> Make   string `json:"make"`
-> Model  string `json:"model"`
-> Colour string `json:"colour"`
-> Owner  string `json:"owner"`
+> - [ ] Make   string `json:"make"`
 >
+> - [ ] Model  string `json:"model"`
+> - [ ] Colour string `json:"colour"`
+> - [ ] Owner  string `json:"owner"`
 
 以及各类交易方法:
 
