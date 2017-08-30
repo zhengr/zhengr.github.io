@@ -11,7 +11,7 @@ tags: [Hyperledger,Blockchain,Car,Supply chain]
 > Chaincode is a program, written in Go, and eventually in other programming languages such as Java, that implements a prescribed interface. Chaincode runs in a secured Docker container isolated from the endorsing peer process. Chaincode initializes and manages ledger state through transactions submitted by applications. A chaincode typically handles business logic agreed to by members of the network, so it may be considered as a “smart contract”. State created by a chaincode is scoped exclusively to that chaincode and can’t be accessed directly by another chaincode. However, within the same network, given the appropriate permission a chaincode may invoke another chaincode to access its state.
 >
 
-下面fabcar这个chaincode里car有四属性以及各类交易方法，
+下面fabcar这个chaincode里car有四属性
 
 > Make   string `json:"make"`
 > Model  string `json:"model"`
@@ -19,9 +19,11 @@ tags: [Hyperledger,Blockchain,Car,Supply chain]
 > Owner  string `json:"owner"`
 >
 
-{0}. createCar   创建车
-{0}. queryAllCars 查询所有车
-{0}. changeCarOwner  改变车主
+以及各类交易方法:
+
+1.  createCar   创建车
+2.  queryAllCars 查询所有车
+3.  changeCarOwner  改变车主
 
 chaincode具体代码如下：
 
@@ -270,7 +272,7 @@ printf "\nTotal execution time : $(($(date +%s) - starttime)) secs ...\n\n"
 
 
 ```shell
-root@ubuntu:~/fabric-samples/fabcar# . ./startFabric.sh
+root@ubuntu:~/fabcar# . ./startFabric.sh
 
 docker-compose -f docker-compose.yml down
 Removing network net_basic
@@ -396,7 +398,7 @@ Creating cli ... done
 
 Total execution time : 122 secs ...
 
-root@ubuntu:~/fabric-samples/basic-network#
+root@ubuntu:~/basic-network#
 ```
 
 ### 执行区块链交易
@@ -676,7 +678,6 @@ The transaction has been committed on peer localhost:7053
  event promise all complete and testing complete
 Successfully sent transaction to the orderer.
 root@ubuntu:~/fabcar# 
-
 ```
 
 再查询一下
