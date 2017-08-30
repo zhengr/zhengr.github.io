@@ -1,10 +1,10 @@
 ---
 layout: post
-title:  详解区块链Hyperledger Fabric里面资产（车辆）交易
+title:  详解区块链Hyperledger Fabric资产（车辆）交易
 category: Blockchain
 tags: [Hyperledger,Blockchain,Car,Supply chain]
 ---
-## 详解区块链Hyperledger Fabric里面资产（车辆）交易
+## 详解区块链Hyperledger Fabric资产（车辆）交易
 
 首先定义Chaincode 链码及API， 通过定义相应的数据结构和方法就完成了一个智能契约，参考原文如下：
 
