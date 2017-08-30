@@ -14,7 +14,6 @@ tags: [Hyperledger,Blockchain,Car,Supply chain]
 下面fabcar这个chaincode里car有四属性
 
 - Make   string `json:"make"`
-
 - Model  string `json:"model"`
 - Colour string `json:"colour"`
 - Owner  string `json:"owner"`
