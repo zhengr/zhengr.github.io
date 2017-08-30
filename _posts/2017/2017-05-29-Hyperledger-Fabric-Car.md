@@ -401,6 +401,16 @@ Total execution time : 122 secs ...
 root@ubuntu:~/basic-network#
 ```
 
+```shell
+CONTAINER ID        IMAGE                                     COMMAND                  CREATED             STATUS              PORTS                                            NAMES
+3b2978bd8bb9        dev-peer0.org1.example.com-fabcar-1.0     "chaincode -peer.a..."   15 hours ago        Up 15 hours                                                          dev-peer0.org1.example.com-fabcar-1.0
+e58f60336983        hyperledger/fabric-tools:x86_64-1.0.0     "/bin/bash"              15 hours ago        Up 15 hours                                                          cli
+efecad2b6d36        hyperledger/fabric-peer:x86_64-1.0.0      "peer node start"        15 hours ago        Up 15 hours         0.0.0.0:7051->7051/tcp, 0.0.0.0:7053->7053/tcp   peer0.org1.example.com
+8bf3d70e5f42        hyperledger/fabric-ca:x86_64-1.0.0        "sh -c 'fabric-ca-..."   15 hours ago        Up 15 hours         0.0.0.0:7054->7054/tcp                           ca.example.com
+dd58d8c032e3        hyperledger/fabric-orderer:x86_64-1.0.0   "orderer"                15 hours ago        Up 15 hours         0.0.0.0:7050->7050/tcp                           orderer.example.com
+8077c0b69096        hyperledger/fabric-couchdb:x86_64-1.0.0   "tini -- /docker-e..."   15 hours ago        Up 15 hours         4369/tcp, 9100/tcp, 0.0.0.0:5984->5984/tcp       couchdb
+```
+
 ### 执行区块链交易
 
 通过以上过程完成构建一个Blockchain Network，接下来我们将通过Node.Js编写的程序Application执行交易。
