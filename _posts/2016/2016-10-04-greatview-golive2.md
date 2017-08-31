@@ -10,9 +10,9 @@ tags: [ERP,Oracle,Greatview]
 
 与一期不同，欧洲项目实施细节要求更多，自动化程度更高，我们也尝试将一部分工业4.0的概念植入此次实施，例如与MES， AGV系统的集成。并进一步细化管理，采用单卷，单品，半成品，多维度成本核算。
 
-![kickoff](../../assets/images/kickoff.PNG)
+![kickoff](https://raw.githubusercontent.com/zhengr/zhengr.github.io/master/assets/images/kickoff.PNG)
 
-![AGV](../../assets/images/AGV.jpg)
+![AGV](https://raw.githubusercontent.com/zhengr/zhengr.github.io/master/assets/images/AGV.jpg)
 
 > 2016年10月，纷美包装ERP二期系统正式上线，自此纷美国内、国际生产、运营系统全部打通，集团实现财务业务一体化的精准管理模式，标志着纷美集团全面进入数字化运营阶段，推动纷美全球业务的信息化步伐。
 >
@@ -22,6 +22,6 @@ tags: [ERP,Oracle,Greatview]
 >
 > 无论德国工业4.0还是中国制造2025战略，都是旨在提升国家制造业智能化水平的国家竞争策略。纷美集团ERP系统的全面上线不仅是纷美数字化战略的里程碑之一，也使纷美成为中国制造业向中国制造2025迈进的先锋实践者。
 
-![golive1](../../assets/images/golive1.jpg)
+![golive1](https://raw.githubusercontent.com/zhengr/zhengr.github.io/master/assets/images/golive1.jpg)
 
-![golive2](../../assets/images/golive2.jpg)
+![golive2](https://raw.githubusercontent.com/zhengr/zhengr.github.io/master/assets/images/golive2.jpg)
