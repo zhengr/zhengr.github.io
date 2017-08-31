@@ -16,4 +16,4 @@ tags: [ERP,Oracle,Greatview]
 >
 > Oracle-ERP系统不仅仅是一个管理信息系统的搭建，更是纷美包装向集团化管控迈出的一大步。Oracle作为全球顶尖的ERP系统供应商之一，它已形成的全球最佳业务实践模板，必将为纷美包装的全球业务扩张保驾护航。
 
-![31133000](../../assets/images/31133000.jpg)
+![上线庆祝会](https://raw.githubusercontent.com/zhengr/zhengr.github.io/master/assets/images/31133000.jpg)
