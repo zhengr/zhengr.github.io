@@ -7,13 +7,13 @@
 
 # Site settings
 title: Innovation Chain
-name: 0rac1e
+name: 郑瑞
 email: zhengr@msn.com
 location: Leipzig, Germany
 company: <(￣）￣)> []~(￣▽￣)~* (￣﹏￣) (￣ˇ￣)
 company_url: http://www.eeic.com.cn
 github_url: https://github.com/zhengr
-description: This is personnel website of robin zheng
+description: This is personnel website of robin zheng (郑瑞)
 favicon: favicon.png # Image must be in assets/images
 
 url: http://zhengr.github.io # the base hostname & protocol for your site
