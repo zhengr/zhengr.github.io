@@ -1,5 +1,9 @@
-
-
+---
+layout: post
+title:  纷美包装ERP系统成功上线运营
+category: ERP
+tags: [ERP,Oracle,Greatview]
+---
 ## 纷美包装ERP系统成功上线运营
 
 2014年2月离开Oracle，加入纷美来负责这个"4个月（财务生产供应链）全模块全新实施"的项目，2014年2月24日项目正式启动，经过浴血4个月，项目于2014年7月4日正式成功上线，上线当天暨完成无并行甩账。此次实施集DES，MES，金税接口，公司间业务，share service center业务于一体，时间紧迫，挑战巨大，四个月亦是一次大胆的挑战，感谢日日夜夜在一起的团队。
@@ -12,4 +16,4 @@
 >
 > Oracle-ERP系统不仅仅是一个管理信息系统的搭建，更是纷美包装向集团化管控迈出的一大步。Oracle作为全球顶尖的ERP系统供应商之一，它已形成的全球最佳业务实践模板，必将为纷美包装的全球业务扩张保驾护航。
 
-![微信图片_20170831130059](https://raw.githubusercontent.com/zhengr/zhengr.github.io/master/assets/images/31130059.jpg)
+![31130059](https://github.com/zhengr/zhengr.github.io/blob/master/assets/images/31133000.jpg)
