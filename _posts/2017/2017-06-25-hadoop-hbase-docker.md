@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  基于Docker单机快速部署Hbase和Hadoop集群
+title:  (原创)基于Docker单机快速部署Hbase和Hadoop集群
 category: Bigdata
 tags:
   - Hbase

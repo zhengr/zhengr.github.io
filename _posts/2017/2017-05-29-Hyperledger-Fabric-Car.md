@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  详解区块链Hyperledger Fabric资产（车辆）交易
+title:  (原创)详解区块链Hyperledger Fabric资产（车辆）交易
 category: Blockchain
 tags: [Hyperledger,Blockchain,Car,Supply chain]
 ---

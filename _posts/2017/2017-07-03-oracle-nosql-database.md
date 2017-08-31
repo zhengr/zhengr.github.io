@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  Oracle NoSQL Database 简介
+title:  (原创)Oracle NoSQL Database介绍及部署
 category: Bigdata
 tags: [NoSQL,Oracle,KEY-VALU]
 ---
