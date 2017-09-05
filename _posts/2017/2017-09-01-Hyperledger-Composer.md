@@ -289,7 +289,4 @@ After submitting this transaction, you should now see  the transaction in the tr
 翻译的文档现在有个致命问题是对关键字的翻译不统一， 有些词汇可以看到好几个版本翻译， 所以还是建议大家直接看原文理解。
 
 
-​        
-
-
 
