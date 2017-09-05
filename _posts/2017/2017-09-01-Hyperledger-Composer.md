@@ -8,7 +8,7 @@ tags: [Hyperledger Fabric,Blockchain,Trace,Playground]
 
 不动手试试总感觉对这个东西的理解只停留在概念和一堆名词上，周末找时间本地搭建了一个超级账本网络配以Hyperledger Composer Playground进行测试，有兴趣的可以耐着性子往下看。
 
-![Homepage_Illustration_2](../../assets/images/Homepage_Illustration_2.png)
+![Homepage_Illustration_2](https://raw.githubusercontent.com/zhengr/zhengr.github.io/master/assets/images/Homepage_Illustration_2.png)
 
 ### 开始前
 
@@ -38,15 +38,15 @@ docker images -aq | xargs docker rmi -f
 
 3.  然后用Chrome或者Firefox访问 http://<HOSTNAME>:8080 打开 Hyperledger Composer Playground，如果下面这页能打开，并且Connection Profiles也可以正常连接的话，恭喜你，基本的测试环境搭建好了。
 
-   ![cpmposer-1](../../assets/images/cpmposer-1.PNG)
+   ![cpmposer-1](https://raw.githubusercontent.com/zhengr/zhengr.github.io/master/assets/images/cpmposer-1.PNG)
 
-![cpmposer-2](../../assets/images/cpmposer-2.PNG)
+![cpmposer-2](https://raw.githubusercontent.com/zhengr/zhengr.github.io/master/assets/images/cpmposer-2.PNG)
 
 ### 测试案例一
 
 我们直接采用Hyperledger Composer自带的测试场景 Commodities Trading Business Network
 
-![cpmposer-3](../../assets/images/cpmposer-3.PNG)
+![cpmposer-3](https://raw.githubusercontent.com/zhengr/zhengr.github.io/master/assets/images/cpmposer-3.PNG)
 
 Trade Network, This Business Network illustrates commodity trading. This business network defines:
 
@@ -248,7 +248,7 @@ To test this Business Network Definition in the **Test** tab:
 }
 ```
 
-![cpmposer-4](../../assets/images/cpmposer-4.PNG)
+![cpmposer-4](https://raw.githubusercontent.com/zhengr/zhengr.github.io/master/assets/images/cpmposer-4.PNG)
 再创建一个商品资产 `Create a `Commodity` asset:
 
 ```
@@ -262,7 +262,7 @@ To test this Business Network Definition in the **Test** tab:
 }
 ```
 
-![cpmposer-5](../../assets/images/cpmposer-5.PNG)
+![cpmposer-5](https://raw.githubusercontent.com/zhengr/zhengr.github.io/master/assets/images/cpmposer-5.PNG)
 提交一个交易事务处理，也就是把商品ABC从Trader1卖给了Trader2, 也就是更换所有者从Trader到Trader2 `Submit a `Trade` transaction:
 
 ```
@@ -273,13 +273,13 @@ To test this Business Network Definition in the **Test** tab:
 }
 ```
 
-![cpmposer-6](../../assets/images/cpmposer-6.PNG)
+![cpmposer-6](https://raw.githubusercontent.com/zhengr/zhengr.github.io/master/assets/images/cpmposer-6.PNG)
 
 After submitting this transaction, you should now see  the transaction in the transaction registry. As a result, the owner of  the commodity `ABC` should now be owned `TRADER2` in the Asset Registry.
 
 提交此事务后，现在应该在事务注册表中可以看到事务。此时商品ABC的所有者在资产注册表中应该变成TRADER2。
 
-![cpmposer-7](../../assets/images/cpmposer-7.PNG)
+![cpmposer-7](https://raw.githubusercontent.com/zhengr/zhengr.github.io/master/assets/images/cpmposer-7.PNG)
 
 看到这里，很多人会解决这是什么呀， 不就改了一个字段值吗？ 这有什么高深莫测的！！其实我们需要明白的是这个字段变化后面整个区块链网络上发生的事情，这部分比较复杂，推荐大家看原文档中两块：
 
