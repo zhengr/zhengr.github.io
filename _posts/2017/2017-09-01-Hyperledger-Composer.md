@@ -2,7 +2,7 @@
 layout: post
 title:  (原创)Hyperledger Composer Playground 安装及示例测试
 category: Blockchain
-tags: [Hyperledger Fabric,Blockchain,Trace,Playground]
+tags: [Hyperledger Fabric,Blockchain,Composer,Playground]
 ---
 ## 本文将带您了解如何在本地机器上安装和运行Hyperledger Composer Playground ，并创建一个Hyperledger Fabric v1.0的实例进行商品交易
 
