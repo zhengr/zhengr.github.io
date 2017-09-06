@@ -281,12 +281,14 @@ After submitting this transaction, you should now see  the transaction in the tr
 
 ![cpmposer-7](https://raw.githubusercontent.com/zhengr/zhengr.github.io/master/assets/images/cpmposer-7.PNG)
 
-看到这里，很多人会解决这是什么呀， 不就改了一个字段值吗？ 这有什么高深莫测的！！其实我们需要明白的是这个字段变化后面整个区块链网络上发生的事情，这部分比较复杂，推荐大家看原文档中两块：
+看到这架构解释里，很多人会觉得这是什么呀， 不就改了一个字段值吗？ 这有什么高深莫测的！！其实我们需要明白的是这个字段变化后面整个区块链网络上发生的事情，这部分比较复杂，推荐大家看原文档中两块：
 
-[架构解释]: https://hyperledger-fabric.readthedocs.io/en/latest/arch-deep-dive.html	"Architecture Explained"
-[交易流程]: https://hyperledger-fabric.readthedocs.io/en/latest/txflow.html#	"Transaction Flow"
+#### Ref
 
-翻译的文档现在有个致命问题是对关键字的翻译不统一， 有些词汇可以看到好几个版本翻译， 所以还是建议大家直接看原文理解。
+* [架构解释](https://hyperledger-fabric.readthedocs.io/en/latest/arch-deep-dive.html) - Architecture Explained
+* [交易流程](https://hyperledger-fabric.readthedocs.io/en/latest/txflow.html) - Transaction Flow 
+
+翻译的文档现在的致命问题是对关键字的翻译不统一， 有些词汇可以看到好几个版本翻译， 所以还是建议大家直接看原文理解。
 
 
 
