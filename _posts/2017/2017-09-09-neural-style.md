@@ -35,11 +35,11 @@ tags: [neural style,tensorflow,Pixar]
 
 经过10几个小时的迭代后，运行终于结束
 
-![20170909Capture3](../../assets/images/20170909Capture3.PNG)
+![20170909Capture3](https://raw.githubusercontent.com/zhengr/zhengr.github.io/master/assets/images/20170909Capture3.PNG)
 
 我们看到的高圆圆成了什么样呢？
 
-![3output1](../../assets/images/3output1.jpg)
+![3output1](https://raw.githubusercontent.com/zhengr/zhengr.github.io/master/assets/images/3output1.jpg)
 
 额滴神哪， 这是啥玩意！吓死俺了，所以在学习库和硬件不够强大情况下效果还是很差强人意。其实这类深度学习搞搞莫奈，梵高那样的意识流的印象派翻到看不出什么， 这类非常精细的效果往往欠妥。
 
