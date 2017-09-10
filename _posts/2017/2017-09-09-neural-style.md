@@ -35,7 +35,7 @@ tags: [neural style,tensorflow,Pixar]
 
 经过10几个小时的迭代后，运行终于结束
 
-![20170909Capture3](https://raw.githubusercontent.com/zhengr/zhengr.github.io/master/assets/images/20170909Capture3.PNG)
+![20170909Capture3](https://raw.githubusercontent.com/zhengr/zhengr.github.io/master/assets/images/20170909Capture3.PNG)![img](https://raw.githubusercontent.com/zhengr/zhengr.github.io/master/assets/images/20170909Capture3.PNG)
 
 我们看到的高圆圆成了什么样呢？
 
