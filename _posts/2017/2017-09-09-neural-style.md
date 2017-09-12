@@ -47,6 +47,8 @@ tags: [neural style,tensorflow,Pixar]
 
 ----------------------------------------------------3000次迭代分割线----------------------------------------------------
 
+![20170909Capture4](https://raw.githubusercontent.com/zhengr/zhengr.github.io/master/assets/images/20170909Capture4.PNG)
+
 ![3output2](https://raw.githubusercontent.com/zhengr/zhengr.github.io/master/assets/images/3output2.jpg)
 
 经过3000次迭代，效果好了一些，学习库的局限性和硬件的薄弱，做太精细的事情还是不行的。
