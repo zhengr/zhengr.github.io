@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  (原创)Hyperledger 区块链技术催促供应链（SCM）再度进化，真正实现供应链全局可视化
+title:  (原创)Hyperledger区块链技术催促供应链（SCM）再度进化，真正实现供应链全局可视化
 category: Blockchain
 tags: [Hyperledger Composer,Blockchain,Inventory,Supply chain]
 ---
