@@ -41,7 +41,7 @@ tags: [Hyperledger Composer,Blockchain,Inventory,Supply chain]
 - models/vehicle.cto
 
 
-```json
+```
 /* models/base.cto
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -112,7 +112,7 @@ concept Address {
 }
 ```
 
-```json
+```
 /* models/business.cto
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -152,10 +152,9 @@ abstract participant Employee extends Person {
 abstract participant Manager extends Employee {
   --> Employee[] directReports optional
 }
-
 ```
 
-```json
+```
 /* models/manufacturer.cto
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -241,7 +240,6 @@ event UpdateOrderStatusEvent {
   o OrderStatus orderStatus
   o Order order
 }
-
 ```
 
 ```json
