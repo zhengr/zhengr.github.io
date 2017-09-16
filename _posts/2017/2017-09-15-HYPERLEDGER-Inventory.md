@@ -1061,7 +1061,6 @@ zhengr把车转手给了Anna，需要提交一个PrivateVehicleTransfer事务
 当一个特定的区块链网络（Hyperledger Fabric V1）成立，相关的ERP、CRM、MES、APP通过相应SDK， REST API，订阅/发布 Event, 都可以非常顺畅的加入到区块链中。当前可以测试通过的系统有：
 
 - Oracle e-business suites R12 
-
 - Oracle Fusion application
 - Siebel
 - SAP 待测试  
