@@ -30,7 +30,7 @@ tags: [Hyperledger Composer,Blockchain,Inventory,Supply chain]
 
 ![20170915Capture1](https://raw.githubusercontent.com/zhengr/zhengr.github.io/master/assets/images/20170915Capture1.PNG)
 
-我们接下来逐一对以上这些元素展开介绍， 首先我们将构建三个models，
+我们接下来逐一对以上这些元素展开介绍， 首先我们将构建五个models，
 
 > * [参考：网络定义](https://hyperledger.github.io/composer/business-network/businessnetworkdefinition.html) - Business Network Definition
 
