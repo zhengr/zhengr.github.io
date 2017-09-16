@@ -1,10 +1,10 @@
 ---
 layout: post
-title:  (原创)Hyperledger 区块链技术催促供应链（SCM）再度进化，真正实现供应链可视化
+title:  (原创)Hyperledger 区块链技术催促供应链（SCM）再度进化，真正实现供应链全局可视化
 category: Blockchain
-tags: [Hyperledger,Blockchain,Trace,Supply chain]
+tags: [Hyperledger Composer,Blockchain,Inventory,Supply chain]
 ---
-## 区块链技术日趋成熟，真正意义上看，供应链将迎来一次巨大的升级。这是一次性打通供应链上下游的机会，信息不再是由点对点数据传输实现共享和传递。
+## 区块链技术日趋成熟，看未来五年，供应链将迎来一次巨大的升级。这是一次性打通供应链上下游的机会，信息不再是由点对点数据传输实现共享和传递。
 
 区块链能够围绕核心企业甚至终端消费者搭建一条包括制造商、供应商、零售商、物流公司、消费者在内的信息联盟，并将资金流、信息流、事务流都记录在这链条上。区块链的核心之处在于，参与的各方必须沿着时间轴实时提交事务数据，信息一旦经过背书写入区块，就只能读取，不能随意更改、删除，伪造。
 
@@ -14,9 +14,9 @@ tags: [Hyperledger,Blockchain,Trace,Supply chain]
 
 这个区块链网络跟踪从订单->制造->报废的车辆的生命周期，包括私人所有者、制造商、车管所/交警队和报废厂。车管所/交警队能够在整个过程中提供监督。
 
-A `PriavteOwner` participant would submit a `PlaceOrder` transaction, through a Manufacturer's application. A `Manufacturer` would submit an `UpdateOrderStatus` transaction which would be the Vehicle being manufactured. They would apply for a registration certificate by submitting an `ApplicationForVehicleRegistrationCertificate` transaction. After the vehicle has been manufactured they would submit a `PrivateVehicleTransfer` transaction. A `Regulator` would be able perform oversight over this whole process and submit an `UpdateSuspicious` transaction to view any suspicious vehicles that may be out of compliance with regulations. A `ScrapMerchant` would be able to submit a `ScrapVehicle` or a `ScrapAllVehiclesByColour` transaction to complete the lifecycle of a vehicle.
-
 一个私人客户`PriavteOwner` 参与者将通过制造商的应用程序提交`PlaceOrder`（下单）事务。制造商`Manufacturer`确认客户订单后将提交`UpdateOrderStatus` 事务，通过该事务可以根据车辆生产的进度不断更新订单状态（PLACED -> SCHEDULED_FOR_MANUFACTURE -> VIN_ASSIGNED -> OWNER_ASSIGNED -> DELIVERED），以便客户可以随时获知进度。车辆制造到一定阶段，制造商也将通过提交一个`ApplicationForVehicleRegistrationCertificate` 的事务来申请注册证书。当车辆被交付客户后，私人客户可以提交`PrivateVehicleTransfer`事务以完成客户间车辆买卖。监管机构可以对整个流程进行监督，并提交`UpdateSuspicious` 事务，以查看任何可能违反监管规定的可疑车辆。车辆报废厂可以提交一个`ScrapVehicle`或`ScrapAllVehiclesByColour`事务，来完成车辆的生命周期。
+
+![20170915Capture16](https://raw.githubusercontent.com/zhengr/zhengr.github.io/master/assets/images/20170915Capture16.PNG)
 
 这个区块链网络中需要做如下定义:
 
@@ -927,7 +927,7 @@ function scrapAllVehiclesByColour(scrapAllVehicles) {
 
 ![20170915Capture3](https://raw.githubusercontent.com/zhengr/zhengr.github.io/master/assets/images/20170915Capture3.PNG)
 
-用户zhengr提交`PlaceOrder`事务处理下订单， 订单号"SO87200315"
+首先用户zhengr提交`PlaceOrder`事务处理下订单， 订单号"SO87200315"
 
 ```
 {
@@ -1060,7 +1060,23 @@ zhengr把车转手给了Anna，需要提交一个PrivateVehicleTransfer事务
 
 通过以上的一系列操作可以看出，不同的软件， 不同的公司，不同的人都在同一个链条上对区块进行操作，这样的事务记录是去中心的，提交点不同但是都需要遵守区块链的交易规则。
 
+当一个特定的区块链网络（Hyperledger Fabric V1）成立，相关的ERP、CRM、MES、APP通过相应SDK， REST API，订阅/发布 Event, 都可以非常顺畅的加入到区块链中。当前可以测试通过的系统有：
 
+Oracle e-business suites R12 
+Oracle Fusion application
+Siebel
+SAP 待测试  
 
-==================待续==========================
+==================补充==========================
 
+本例中车辆制造商的ERP/MES可以是这个样子:
+
+![20170915Capture17](https://raw.githubusercontent.com/zhengr/zhengr.github.io/master/assets/images/20170915Capture17.PNG)
+
+监管机构的可以是这样的系统：
+
+![20170915Capture18](https://raw.githubusercontent.com/zhengr/zhengr.github.io/master/assets/images/20170915Capture18.PNG)
+
+用户可以随时通过手机客户端查看车辆交付进展：
+
+![20170915Capture19](https://raw.githubusercontent.com/zhengr/zhengr.github.io/master/assets/images/20170915Capture19.PNG)
