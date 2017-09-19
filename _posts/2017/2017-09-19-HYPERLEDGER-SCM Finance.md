@@ -5,6 +5,7 @@ category: Blockchain
 tags: [Hyperledger,Blockchain,Banking,Supply Chain Finance]
 ---
 ## 区块链技术助力供应链金融成为两眼活棋的局面将不只是想象，越来越多的企业，组织，金融机构已经发现掣肘的难点都将被区块链解决，就像要被打通任督二脉一样。
+
 > 百度百科：
 >
 > 供应链金融（Supply Chain Finance），SCF，**是商业银行信贷业务的一个专业领域（银行层面），也是企业尤其是中小企业的一种融资渠道（企业层面）。**
