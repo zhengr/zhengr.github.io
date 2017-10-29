@@ -4,8 +4,6 @@ title:  (原创)实战人工智能（TensorFlow）在证券量化交易中的突
 category: Tensorflow
 tags: [Tensorflow,Stock,Quant,Data,量化交易]
 ---
-本文将带您了解Hyperledger Composer REST Server 如何为传统应用系统打开区块链大门，通过使用开放的service API，可以轻松与现有系统集成在一起。通过集成现有系统将允许您从现有的业务系统中提取数据，并将其转换为一个区块链业务网络中的资产或参与者。
-
 近年来各类量化交易平台层出不穷， 多数是基于类似（anaconda + 证券数据）这样的数据建模+分析平台， 通过Python的强大数据处理能力来构建量化交易策略。近期测用了一个借助Tensorflow深度学习技术的量化工具，将人工智能概念与量化交易融合，回测结果非常惊人，远超沪深300。
 
 ### 可视化策略设计
