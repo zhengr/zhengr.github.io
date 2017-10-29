@@ -6,11 +6,11 @@ tags: [Tensorflow,Stock,Quant,Data,量化交易]
 ---
 近年来各类量化交易平台层出不穷， 多数是基于类似（anaconda + 证券数据）这样的数据建模+分析平台， 通过Python的强大数据处理能力来构建量化交易策略。近期测用了一个借助Tensorflow深度学习技术的量化工具，将人工智能概念与量化交易融合，回测结果非常惊人，远超沪深300。
 
-### 可视化策略设计
+## 可视化策略设计
 
 ![20171029Capture2](https://raw.githubusercontent.com/zhengr/zhengr.github.io/master/assets/images/20171029Capture2.PNG)
 
-### 执行基于深度学习的量化交易策略
+## 执行基于深度学习的量化交易策略
 
 ```verilog
 [2017-10-30 04:23:51.860846] INFO: quant: instruments.v2 开始运行..
@@ -100,7 +100,7 @@ tags: [Tensorflow,Stock,Quant,Data,量化交易]
 [2017-10-30 04:39:13.489930] INFO: bigquant: backtest.v7 运行完成[57.624996s].
 ```
 
-### 回测结果数据
+## 回测结果数据
 
 ![20171029Capture1](https://raw.githubusercontent.com/zhengr/zhengr.github.io/master/assets/images/20171029Capture1.PNG)
 
