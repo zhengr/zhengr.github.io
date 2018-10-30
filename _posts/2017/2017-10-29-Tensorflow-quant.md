@@ -10,7 +10,7 @@ tags: [Tensorflow,Stock,Quant,Data,量化交易]
 
 ![20171029Capture2](https://raw.githubusercontent.com/zhengr/zhengr.github.io/master/assets/images/20171029Capture2.PNG)
 
-## 执行基于深度学习的量化交易策略
+## 执行基于深度学习的量化交易策略 
 
 ```verilog
 [2017-10-30 04:23:51.860846] INFO: quant: instruments.v2 开始运行..
