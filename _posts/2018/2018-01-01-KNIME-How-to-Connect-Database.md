@@ -36,11 +36,11 @@ Flow Variable List: list of flow variables at this particular node; those can be
 #### Vendor-specific Database Connectors
 All vendors bring along their specific database driver which are not part of the KNIME release. Those need to be downloaded from the vendor's website or can be retrieved from your database installation/adminstrator:
 
-SQLite: http://bitbucket.org/xerial/sqlite-jdbc/downloads
-Postgres: http://jdbc.postgresql.org/download.html
-Microsoft SQL Server: http://msdn.microsoft.com/en-us/library/ms378526.aspx
-Oracle: http://www.oracle.com/technetwork/database/features/jdbc/index-091264.html
-MySQL: http://www.mysql.com/downloads/connector/j
-IBM DB2 / Informix: http://www14.software.ibm.com/webapp/download/search.jsp?go=y&rs=ifxjdbc
-Apache Derby: http://db.apache.org/derby/derby_downloads.html
-SAP HANA: https://support.sap.com/en/my-support/software-downloads.html 
+- SQLite: http://bitbucket.org/xerial/sqlite-jdbc/downloads
+- Postgres: http://jdbc.postgresql.org/download.html
+- Microsoft SQL Server: http://msdn.microsoft.com/en-us/library/ms378526.aspx
+- Oracle: http://www.oracle.com/technetwork/database/features/jdbc/index-091264.html
+- MySQL: http://www.mysql.com/downloads/connector/j
+- IBM DB2 / Informix: http://www14.software.ibm.com/webapp/download/search.jsp?go=y&rs=ifxjdbc
+- Apache Derby: http://db.apache.org/derby/derby_downloads.html
+- SAP HANA: https://support.sap.com/en/my-support/software-downloads.html 
