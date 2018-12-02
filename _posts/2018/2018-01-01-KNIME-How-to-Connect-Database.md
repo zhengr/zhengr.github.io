@@ -8,13 +8,6 @@ published: true
 ## KNIME 连接主流数据库方法
 
 
-
-### Level 3
-#### Level 4
-##### Level 5
-
-https://raw.githubusercontent.com/zhengr/zhengr.github.io/master/assets/images/
-
 ### Database Documentation
 #### Installation and Setup
 KNIME allows connecting to almost all JDBC-compliant databases. Within the Database category in the Node Repository view, KNIME offers a number of database access, manipulation and writing nodes.
