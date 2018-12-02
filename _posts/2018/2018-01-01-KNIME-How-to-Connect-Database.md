@@ -33,7 +33,7 @@ SQL Statement: enter the SELECT statement to fetch the data from the spcified ta
 Flow Variable List: list of flow variables at this particular node; those can be used within the SQL statement to parametrize the Reader node and/or to use it within a loop.
  
 
-####Vendor-specific Database Connectors
+#### Vendor-specific Database Connectors
 All vendors bring along their specific database driver which are not part of the KNIME release. Those need to be downloaded from the vendor's website or can be retrieved from your database installation/adminstrator:
 
 SQLite: http://bitbucket.org/xerial/sqlite-jdbc/downloads
