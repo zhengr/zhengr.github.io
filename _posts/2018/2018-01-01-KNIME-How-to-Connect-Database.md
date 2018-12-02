@@ -21,19 +21,18 @@ KNIME allows connecting to almost all JDBC-compliant databases. Within the Datab
 
 In the KNIME preference page that can be accessed via File > Preferences > KNIME > Database Driver, the vendor-specific database driver need to be registered before using the database nodes. The driver file can be either a Jar or Zip file:
 
- 
-
+![Homepage_Illustration_2](https://raw.githubusercontent.com/zhengr/zhengr.github.io/master/assets/images/db_prefs.png)
 
 After the driver is registered, all database nodes can be used to connect to your favorit database. The Database Reader and Database Connection Reader, or Database Writer, can be configured in the following way:
 
- 
+![Homepage_Illustration_2](https://raw.githubusercontent.com/zhengr/zhengr.github.io/master/assets/images/db_reader_with_credentials.png)
 
 
 Database Driver: the combo box shows all available database driver, select the one that is approviated for your database.
 Database URL: the database-specific protocol used to connect to the database.
 Workflow Credentials: as specified on the workflow using the item 'Workflow Credentials', the user can simply select from on of the credentials holding user name and password.
  
-
+![Homepage_Illustration_2](https://raw.githubusercontent.com/zhengr/zhengr.github.io/master/assets/images/db_credentials_dialog.png)
 
 User Name / Password: the other option is to use user name / password directly to connect to the database.
 Database Browser: enter all settings before connecting to the database, the browser view shows all tables and columns contained in the database. Click on either option to insert it into the SQL statement.
