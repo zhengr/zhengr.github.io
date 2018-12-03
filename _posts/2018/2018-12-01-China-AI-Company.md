@@ -5,10 +5,10 @@ category: Bigdata
 tags: [AI]
 published: true
 ---
+## 主流大数据，AI相关公司清单列表
 			
 <div class="gm_company_box">
 	<div class="gm_commpany_tit">
-		<h2>公司板</h2>
 	</div>
 		<div class="gm_commpany_main">
 		<div class="gm_commpany_type">AI平台<span>（共12家公司）</span></div>
