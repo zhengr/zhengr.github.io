@@ -23,7 +23,7 @@ published: true
 <p>普通的用户只能查看EBS的接口信息，但并不能发布接口，以及部署，只有sysadmin账户有这个权限。（注：默认情况下，绝大多数的接口是没有发布及部署的，只有需要sysadmin发布后，第三方系统才能调用。）</p>
 <p>如果不想使用sysadmin这个账户来管理接口，那么就要给目标用户分配三个角色，才能做sysadmin同样的事情，这三个角色是：</p>
 <p>* Irep Administrator（中文：<span id="N1:DisplayName:0" title="名称">Irep 管理员</span>）<br />* System Integration Developer（中文：<span id="AccessRoleTableRN:AccessRoleNameRN:1"><span id="AccessRoleTableRN:AccessRoleDisplayName:1" title="访问职责">系统集成开发员</span></span>）<br />* System Integration Analyst（中文：<span id="AccessRoleTableRN:AccessRoleNameRN:0"><span id="AccessRoleTableRN:AccessRoleDisplayName:0" title="访问职责">系统集成分析专家</span></span>）<br /><br />每一个角色都有着对接口库不同的权限，如下图</p>
-<p><img src="https://img-blog.csdn.net/20130822100526500?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvcGFuX3RpYW4=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="" /></p>
+<p><img src="https://img-blog.csdn.net/20130822100526500" alt="" /></p>
 <p>sysadmin默认是具有上述三个角色的，所以不需要特别设置。其他用户就需要设置了，如何给用户分配角色可以参见Note:<a href="https://support.oracle.com/epmos/faces/DocumentDisplay?_afrLoop=936970254370630&amp;id=861982.1&amp;_afrWindowMode=0&amp;_adf.ctrl-state=17nubdxmt4_17" rel="nofollow">861982.1</a><br /></p>
 <p><br /></p><h2>Interfaces<br /></h2>
 <p>接下来会以系统默认提供的一个接口为例，演示一下，如何放开接口，允许外部程序调用的一个过程。<br /></p>
