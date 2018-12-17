@@ -8,11 +8,6 @@ published: true
 ## 在GV，我们采用将大核心ERP系统全盘服务化，和MES，DES等关键业务系统通过服务做流程编排，实现灵动的敏捷。
 ## 因为信息保密只能通过网上一篇文章简单介绍（Oracle ISG）大致的情况。
 
-<div id="article_content" class="article_content clearfix csdn-tracking-statistics" data-pid="blog"  data-mod=popu_307  data-dsm = "post" >
-								<div class="article-copyright">
-					版权声明：转载请以链接形式注明出处					https://blog.csdn.net/pan_tian/article/details/10159935				</div>
-								            <link rel="stylesheet" href="https://csdnimg.cn/release/phoenix/template/css/ck_htmledit_views-d7e2a68c7c.css" />
-						<div class="htmledit_views" id="content_views">
 <p>Oracle EBS如何与第三方系统相集成？比如这样的需求，X系统知道物料编码，需要从EBS系统里读取具体物料信息，或者X系统想把自己的人员信息同步到EBS，这类集成问题你就可能需要用到<a href="http://blog.csdn.net/pan_tian/article/details/8504882" rel="nofollow">Oracle EBS Integrated SOA Gateway</a>。</p>
 <p>Integrated SOA Gateway是EBS里的一个职责，<a href="http://blog.csdn.net/pan_tian/article/details/8504882" rel="nofollow">分配给用户后就能看到</a> ，进入职责（如下图）后，就能看到所有Oracle EBS可以（只是可以，真正放开需要发布和部署的动作）对外开发的接口。</p>
 <p>（当然如果这些系统自带接口还不能满足你的集成需求的话，那么你就需要<a href="http://blog.csdn.net/pan_tian/article/details/11257993" rel="nofollow">自定义客户化接口</a>了）</p>
@@ -110,5 +105,3 @@ published: true
 <p><br /></p>
 <p>转载请注明出处：<a href="http://blog.csdn.net/pan_tian/article/details/10159935" rel="nofollow">http://blog.csdn.net/pan_tian/article/details/10159935</a><br /></p>
 <p><br /></p>
-<p><br /></p>            </div>
-                </div>
