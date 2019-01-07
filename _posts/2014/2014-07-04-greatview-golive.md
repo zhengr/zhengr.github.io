@@ -1,8 +1,7 @@
 ---
 title:  纷美包装ERP系统成功上线运营
 layout: article
-category: ERP
-tags: [ERP,Oracle,Greatview]
+tags: ERP,Oracle,Greatview
 ---
 ## 纷美包装ERP系统成功上线运营
 
