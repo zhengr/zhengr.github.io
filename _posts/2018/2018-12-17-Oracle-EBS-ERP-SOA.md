@@ -1,8 +1,9 @@
 ---
-layout: article
 title:  （转）Oracle ERP(EBS) 服务化助力互联网企业应对业务快速变化
+layout: article
 tags: ERP,SOA,ESB,EBS
 ---
+
 ## 在GV，我们采用将大核心ERP系统全盘服务化，和MES，DES等关键业务系统通过服务做流程编排，实现灵动的敏捷。
 ## 因为信息保密只能通过网上一篇文章简单介绍（Oracle ISG）大致的情况。
 
