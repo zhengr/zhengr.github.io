@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: article
 title:  (原创)Neural style神经元网络深度学习皮克斯风美化头像
 category: neural network
 tags: [neural style,tensorflow,Pixar]

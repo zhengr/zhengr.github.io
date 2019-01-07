@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: article
 title:  (原创)区块链技术将盘活供应链金融Supply Chain Finance,两眼活棋的局面将要到来
 category: Blockchain
 tags: [Hyperledger,Blockchain,Banking,Supply Chain Finance]

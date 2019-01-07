@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: article
 title:  (原创)Hyperledger Composer REST Server为传统ERP系统打开区块链大门
 category: Blockchain
 tags: [Hyperledger Fabric,Blockchain,Composer,REST Server]

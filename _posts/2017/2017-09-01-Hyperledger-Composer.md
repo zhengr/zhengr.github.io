@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: article
 title:  (原创)Hyperledger Composer Playground 安装及示例测试
 category: Blockchain
 tags: [Hyperledger Fabric,Blockchain,Composer,Playground]

@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: article
 title:  (原创)实战人工智能（TensorFlow）在证券量化交易中的突破
 category: Tensorflow
 tags: [Tensorflow,Stock,Quant,Data,量化交易]

@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: article
 title:  主流大数据，AI相关公司清单列表
 category: Bigdata
 tags: [AI]

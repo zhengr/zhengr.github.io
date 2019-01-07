@@ -1,6 +1,6 @@
 ---
-title:  （转）Oracle ERP(EBS) 服务化助力互联网企业应对业务快速变化
 layout: article
+title:  （转）Oracle ERP(EBS) 服务化助力互联网企业应对业务快速变化
 tags: ERP,SOA,ESB,EBS
 ---
 

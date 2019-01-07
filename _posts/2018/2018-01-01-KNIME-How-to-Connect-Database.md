@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: article
 title:  KNIME 连接主流数据库方法
 category: Bigdata
 tags: [DATABASE,BIGDATA,]

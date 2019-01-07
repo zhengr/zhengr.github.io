@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: article
 title:  重建 Oracle EM For EBS R12
 category: EBS
 tags: [Oracle,EBS,EM,R12]

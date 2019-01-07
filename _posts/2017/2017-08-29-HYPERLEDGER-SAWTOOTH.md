@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: article
 title:  (原创)Hyperledger 在供应链可视化案例
 category: Blockchain
 tags: [Hyperledger,Blockchain,Trace,Supply chain]

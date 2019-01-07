@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: article
 title:  (原创)Oracle Node.js 连接Oracle ERP数据库测试
 category: Node.js
 tags: [Oracle,Node.js]
