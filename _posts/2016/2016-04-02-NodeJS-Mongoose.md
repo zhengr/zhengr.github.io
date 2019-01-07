@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: article
 title: NodeJS Mongoose
 category: NodeJS
 tags: [nodejs]
