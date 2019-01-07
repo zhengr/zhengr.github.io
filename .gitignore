@@ -1,6 +1,4 @@
-_site
-.sass-cache
-node_modules
+_site.sass-cachenode_modules
 /vendor
 .DS_Store
 .idea
