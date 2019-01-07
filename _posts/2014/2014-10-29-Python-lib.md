@@ -1,7 +1,7 @@
 ---
 title:  强大的Python模块
 layout: article
-tags: [Python,Lib,数据科学]
+tags: Python,Lib,数据科学
 ---
 强大的Python模块, 数据科学必备
 
