@@ -1,8 +1,7 @@
 ---
 layout: article
 title: NodeJS Mongoose
-category: NodeJS
-tags: [nodejs]
+tags: nodejs
 ---
 
 Quick note about Mongoose. 
