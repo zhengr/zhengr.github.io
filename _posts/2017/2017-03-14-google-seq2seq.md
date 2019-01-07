@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: article
 title: Google 开源一个通用编码-解码框架（tf-seq2seq）
 category: Tensorflow
 tags:

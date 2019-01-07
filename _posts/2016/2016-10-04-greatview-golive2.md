@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: article
 title:  纷美包装ERP系统二期海外成功上线运营
 category: ERP
 tags: [ERP,Oracle,Greatview]

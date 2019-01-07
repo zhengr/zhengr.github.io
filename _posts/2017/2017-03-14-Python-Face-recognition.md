@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: article
 title: 人脸识别——Python Face_recognition 安装
 category: Tensorflow
 tags: [face_recognition,dlib,faceid]
