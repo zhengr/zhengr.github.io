@@ -1,9 +1,10 @@
 ---
-published: false
+published: true
+layout: article
+key: 20190909
+typora-copy-images-to: ../../assets/images
 ---
 ## A New Post
-
-Enter text in [Markdown](http://daringfireball.net/projects/markdown/). Use the toolbar above, or click the **?** button for formatting help.
 
 {
  "cells": [
