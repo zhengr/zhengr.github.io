@@ -82,18 +82,9 @@ aml2.leaderboard.head()
 </table>
 
 
-
-
-
-​    
-
-
-
+```python
 pred = aml.predict(test)
 pred.head()
-
-
-```python
 perf = aml.leader.model_performance(test)
 perf
 ```
@@ -107,20 +98,6 @@ perf
     MAE: 0.6762945751646032
     RMSLE: 0.005059084721700143
     Mean Residual Deviance: 1.4739741984261734
-
-
-
-
-
-​    
-
-
-
-
-```python
-
-```
-
 
 ```python
 
