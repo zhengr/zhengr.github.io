@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 layout: article
 key: 20190926
 typora-copy-images-to: ../../assets/images
