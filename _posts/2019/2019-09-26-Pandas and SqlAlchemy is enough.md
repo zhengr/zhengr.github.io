@@ -2,10 +2,9 @@
 published: true
 layout: article
 key: 20190926
-typora-copy-images-to: ../../assets/images
 ---
 
-![未来已来](../../assets/images/1_A8ailHMKF7F4wFrhVeZ-CA.jpeg)
+![未来已来](../../../../assets/images/1_A8ailHMKF7F4wFrhVeZ-CA.jpeg)
 
 
 ## 有的时候简单就是美， 
