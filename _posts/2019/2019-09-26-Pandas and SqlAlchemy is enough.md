@@ -4,7 +4,7 @@ layout: article
 key: 20190926
 ---
 
-![未来已来](../../../../assets/images/1_A8ailHMKF7F4wFrhVeZ-CA.jpeg)
+![未来已来](https://raw.githubusercontent.com/zhengr/zhengr.github.io/master/assets/images/1_A8ailHMKF7F4wFrhVeZ-CA.jpeg)
 
 
 ## 有的时候简单就是美， 
