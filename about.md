@@ -20,7 +20,7 @@ key: page-about
 
 ![TeXt Theme](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/TeXt-home.jpg)
 
-我是Robin，不断游走在这个美丽的世界，在上海，San Jose，Mountview，北京，Leipzig工作生活，现在居住在北京。我对解决问题的热爱激励我在今天这个数据驱动的世界不断扩展我的工作知识。感谢您花时间透过有趣的数据，AI视角来看我的世界。
+我是Robin，不断游走在这个美丽的世界，在上海，San Jose，Mountain View，北京，Leipzig工作生活，现在居住在北京。我对解决问题的热爱激励我在今天这个数据驱动的世界不断扩展我的工作知识。感谢您花时间透过有趣的数据，AI视角来看我的世界。
 
 ```javascript
 (() => console.log('Hello, World!'))();
