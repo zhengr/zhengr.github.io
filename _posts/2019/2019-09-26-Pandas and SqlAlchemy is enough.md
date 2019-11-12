@@ -2,7 +2,6 @@
 published: true
 layout: article
 key: 20190926
-typora-copy-images-to: ../../assets/images
 ---
 
 ![未来已来](https://raw.githubusercontent.com/zhengr/zhengr.github.io/master/assets/images/1_A8ailHMKF7F4wFrhVeZ-CA.jpeg)
