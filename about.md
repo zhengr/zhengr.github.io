@@ -18,21 +18,18 @@ titles:
 key: page-about
 ---
 
-![TeXt Theme](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/TeXt-home.jpg)
+![img](/Users/zhengr/PycharmProjects/zhengr.github.io/assets/images/78179401_2397511480500870_3140406243462479872_o.jpg)
 
-我是Robin，不断游走在这个美丽的世界，在上海，San Jose，Mountain View，北京，Leipzig工作生活，现在居住在北京。我对解决问题的热爱激励我在今天这个数据驱动的世界不断扩展我的工作知识。感谢您花时间透过有趣的数据，AI视角来看我的世界。
+我是RZ，不断游走在这个美丽的世界，在上海，San Jose，Mountain View，北京，Leipzig工作生活，现在居住在北京。我对解决问题的热爱激励我在今天这个数据驱动的世界不断扩展我的知识。感谢您花时间透过有趣的数据，AI视角来看我的世界。
 
 ```javascript
 (() => console.log('Hello, World!'))();
 ```
 
-## Features
+## 一路历程
 
-- Responsive
-- Semantic HTML
-- Skins
-- Highlight Theme
-- Internationalization
-- Search
-- Table of contents
-- Authors (Email, Facebook, Twitter, Linkedin, Weibo, Zhihu, etc)
+- Bearingpoint
+- Oracle
+- Greatview
+- 小米
+- ？
