@@ -11,5 +11,25 @@ key: 20191216
 
 What-If Tool(WIT)为扩展对黑箱分类或回归ML模型的理解提供了一个易于使用的接口。使用该插件，您可以对大量示例执行推理，并立即以各种方式可视化结果。此外，可以手动或以编程方式编辑示例并重新运行模型，以查看更改的结果。它包含用于研究模型性能和数据集子集公平性的工具。
 
+To build the web demos yourself:
+
+- Binary classifier for UCI Census dataset salary prediction
+  - Dataset: [UCI Census](https://archive.ics.uci.edu/ml/datasets/census+income)
+  - Task: Predict whether a person earns more or less than $50k based on their census information
+  - To build and run the demo from code: `bazel run tensorboard/plugins/interactive_inference/tf_interactive_inference_dashboard/demo:demoserver` then navigate to `http://localhost:6006/tf-interactive-inference-dashboard/demo.html`
+- Binary classifier for smile detection in images
+  - Dataset: [CelebA](http://mmlab.ie.cuhk.edu.hk/projects/CelebA.html)
+  - Task: Predict whether the person in an image is smiling
+  - To build and run the demo from code: `bazel run tensorboard/plugins/interactive_inference/tf_interactive_inference_dashboard/demo:imagedemoserver` then navigate to `http://localhost:6006/tf-interactive-inference-dashboard/image_demo.html`
+- Multiclass classifier for Iris dataset
+  - Dataset: [UCI Iris](https://archive.ics.uci.edu/ml/datasets/iris)
+  - Task: Predict which of three classes of iris flowers that a flower falls into based on 4 measurements of the flower
+  - To build and run the demo from code: `bazel run tensorboard/plugins/interactive_inference/tf_interactive_inference_dashboard/demo:irisdemoserver` then navigate to `http://localhost:6006/tf-interactive-inference-dashboard/iris_demo.html`
+- Regression model for UCI Census dataset age prediction
+  - Dataset: [UCI Census](https://archive.ics.uci.edu/ml/datasets/census+income)
+  - Task: Predict the age of a person based on their census information
+  - To build and run the demo from code: `bazel run tensorboard/plugins/interactive_inference/tf_interactive_inference_dashboard/demo:agedemoserver` then navigate to `http://localhost:6006/tf-interactive-inference-dashboard/age_demo.html`
+  - This demo model returns attribution values in addition to predictions (through the use of vanilla gradients) in order to demonstate how the tool can display attribution values from predictions.
+
 https://pair-code.github.io/what-if-tool/index.html 洞悉数据的利器，Google PAIR（[People + AI Research initiative (PAIR)](https://www.google.ai/pair) ）出品。
 
