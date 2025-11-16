@@ -4,21 +4,21 @@
 
 let mainConfig = {
   vssueConfig: {
-    owner: "Yidadaa",
+    owner: "zhengr",
     repo: "Issue-Blog-With-Github-Action",
     clientId: "2783a4b752f56c0ed912",
     clientSecret: "c8d9116fcade901567ff34aa1fb09216731683a3"
   },
 
   repoConfig: {
-    owner: "Yidadaa",
+    owner: "zhengr",
     repo: "Issue-Blog-With-Github-Action",
     pushBranch: "master",
-    email: "yidadaa@qq.com",
-    filterUsers: ['Yidadaa']
+    email: "",
+    filterUsers: ['zhengr']
   },
 
-  title: "YiFei Zhang's Blog",
+  title: "Robin's Blog",
   description: "在这里了解我的一切，对编程的热爱永不停歇。",
   customDomain: "",
   base: "/Issue-Blog-With-Github-Action/",
@@ -36,7 +36,7 @@ let mainConfig = {
       },
       {
         name: "Github",
-        link: "https://github.com/Yidadaa"
+        link: "https://github.com/zhengr"
       },
       {
         name: "CV",
