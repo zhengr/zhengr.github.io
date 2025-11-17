@@ -1,44 +1,6 @@
 <template>
   <div class="footer">
     <div class="footer-content page">
-      <div class="left">
-        <div class="footer-title">FRIEND LINKS</div>
-        <div class="links footer-text">
-          <a :href="link.link" class="link" v-for="link in friendLinks">{{ link.name }}</a>
-        </div>
-        <div class="footer-text" v-if="$themeConfig.pageCount">
-          <span id="busuanzi_container_site_pv" class="footer-count">
-              <span id="busuanzi_value_site_pv"></span>
-              <span id="busuanzi_value_site_uv"></span>
-          </span>
-
-          <div class="counter">
-            <div class="counter-title">PAGE VIEWS</div>
-            <div class="counter-content">
-              <span class="counter-number" v-for="char in pvNumber">{{ char }}</span>
-            </div>
-          </div>
-
-          <div class="counter">
-            <div class="counter-title">USER VIEWS</div>
-            <div class="counter-content">
-              <span class="counter-number" v-for="char in uvNumber">{{ char }}</span>
-            </div>
-          </div>
-        </div>
-
-        <div v-for="(f) in extraFooters" class="extra-text">
-          <div class="footer-title">{{ f.title }}</div>
-          <a v-if="f.link" class="extra-link" :href="f.link">
-            <div class="footer-text">{{ f.text }}</div>
-          </a>
-          <div class="footer-text" v-else>{{ f.text }}</div>
-        </div>
-      </div>
-      <div class="right">
-        <div class="footer-title power">POWERED BY</div>
-        <a class="logo" href="https://github.com/Yidadaa/Issue-Blog-With-Github-Action">ISSUE BLOG</a>
-      </div>
     </div>
   </div>
 </template>
