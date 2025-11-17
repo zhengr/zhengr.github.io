@@ -6,8 +6,8 @@ let mainConfig = {
   vssueConfig: {
     owner: "zhengr",
     repo: "Issue-Blog-With-Github-Action",
-    clientId: "2783a4b752f56c0ed912",
-    clientSecret: "c8d9116fcade901567ff34aa1fb09216731683a3"
+    clientId: "Ov23liMo07p92KjzONJp",
+    clientSecret: "49b4a7a228802e8f6da792ba9af65f373977b98b"
   },
 
   repoConfig: {
