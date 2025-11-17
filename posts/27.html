@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>实战Zeebe下微服务流程编排 | Robin&#39;s Blog</title>
+    <meta name="generator" content="VuePress 1.9.10">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/prism/9000.0.1/themes/prism.min.css">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/KaTeX/0.5.1/katex.min.css">
+    <script charset="utf-8" src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" async="true"></script>
+    <link rel="icon" type="image/png" href="https://avatars2.githubusercontent.com/u/16968934?s=460&amp;v=4">
+    <meta name="description" content="发现事情的乐趣，本身就是奖赏。">
+    
+    <link rel="preload" href="/assets/css/0.styles.3bd79920.css" as="style"><link rel="preload" href="/assets/js/app.c71e4f4f.js" as="script"><link rel="preload" href="/assets/js/11.66041a3d.js" as="script"><link rel="preload" href="/assets/js/4.8750ed51.js" as="script"><link rel="preload" href="/assets/js/8.12c4617f.js" as="script"><link rel="preload" href="/assets/js/43.906a9b9b.js" as="script"><link rel="preload" href="/assets/js/3.4c0f3db2.js" as="script"><link rel="prefetch" href="/assets/js/10.3ee0ffba.js"><link rel="prefetch" href="/assets/js/12.0e3071f1.js"><link rel="prefetch" href="/assets/js/13.1547b0ed.js"><link rel="prefetch" href="/assets/js/14.8515aa15.js"><link rel="prefetch" href="/assets/js/15.a80c22f4.js"><link rel="prefetch" href="/assets/js/16.bb02b0cd.js"><link rel="prefetch" href="/assets/js/17.a6e85e0b.js"><link rel="prefetch" href="/assets/js/18.297fa5e2.js"><link rel="prefetch" href="/assets/js/19.1aacf3bc.js"><link rel="prefetch" href="/assets/js/2.1eb0210d.js"><link rel="prefetch" href="/assets/js/20.9d023618.js"><link rel="prefetch" href="/assets/js/21.4239e814.js"><link rel="prefetch" href="/assets/js/22.69008c5b.js"><link rel="prefetch" href="/assets/js/23.a4baff51.js"><link rel="prefetch" href="/assets/js/24.718ad892.js"><link rel="prefetch" href="/assets/js/25.3cf8e4f3.js"><link rel="prefetch" href="/assets/js/26.6c953844.js"><link rel="prefetch" href="/assets/js/27.4d7f6396.js"><link rel="prefetch" href="/assets/js/28.ec9a2f8b.js"><link rel="prefetch" href="/assets/js/29.9370ddee.js"><link rel="prefetch" href="/assets/js/30.94edadb3.js"><link rel="prefetch" href="/assets/js/31.624138ae.js"><link rel="prefetch" href="/assets/js/32.9d7b5a1a.js"><link rel="prefetch" href="/assets/js/33.a88e618f.js"><link rel="prefetch" href="/assets/js/34.25e05d96.js"><link rel="prefetch" href="/assets/js/35.98a2e34e.js"><link rel="prefetch" href="/assets/js/36.9292a3c1.js"><link rel="prefetch" href="/assets/js/37.4cf24ce6.js"><link rel="prefetch" href="/assets/js/38.22217501.js"><link rel="prefetch" href="/assets/js/39.93ea579e.js"><link rel="prefetch" href="/assets/js/40.e85213c2.js"><link rel="prefetch" href="/assets/js/41.a3a7c381.js"><link rel="prefetch" href="/assets/js/42.68877fe8.js"><link rel="prefetch" href="/assets/js/44.6c806ca0.js"><link rel="prefetch" href="/assets/js/45.81213607.js"><link rel="prefetch" href="/assets/js/46.8705a4ca.js"><link rel="prefetch" href="/assets/js/47.4d1ed8f0.js"><link rel="prefetch" href="/assets/js/48.64b06033.js"><link rel="prefetch" href="/assets/js/5.eb8841d8.js"><link rel="prefetch" href="/assets/js/6.79b71d6c.js"><link rel="prefetch" href="/assets/js/7.89ddef67.js"><link rel="prefetch" href="/assets/js/9.07650bf9.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.3bd79920.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div><div class="header-wrap" data-v-33920667><div class="header page" data-v-33920667><div class="left" data-v-33920667><div class="motto" data-v-33920667></div> <div class="nav" data-v-33920667></div></div> <div class="right" data-v-33920667><div class="search-box" data-v-33920667><input aria-label="Search" placeholder="" autocomplete="off" spellcheck="false" value=""> <!----></div></div></div></div> <div class="page post-page"><div class="title"><div class="post-title">实战Zeebe下微服务流程编排</div></div> <div class="info"><div class="author">zhengr</div> <div class="date">2025/11/17</div> <!----></div> <div class="post-content"><div class="content__default"><h1 id="实战zeebe下微服务流程编排"><a href="#实战zeebe下微服务流程编排" class="header-anchor">#</a> 实战Zeebe下微服务流程编排</h1> <p>构建Zeebe作为下一代工作流引擎，用于新兴用例，例如微服务编排用例，这些用例可能需要引擎每秒处理数十万（或数百万）个新工作流实例。为此，我们使用的图形建模标准已经存在了近15年：BPMN（业务流程模型和表示法）。可以预见，未来微服务编排将会是中台服务化最有力的落地工具之一。</p> <p>借这个机会和大家分享一下基本的Zeebe部署和一个简单的范例。</p> <h2 id="准备环境"><a href="#准备环境" class="header-anchor">#</a> 准备环境</h2> <h5 id="_1-先克隆git上的repository获得zeebe-operate-in-docker的文件包"><a href="#_1-先克隆git上的repository获得zeebe-operate-in-docker的文件包" class="header-anchor">#</a> 1.先克隆Git上的repository获得Zeebe + Operate in Docker的文件包</h5> <div class="language- extra-class"><pre class="language-text"><code>git clone https://github.com/zeebe-io/zeebe-docker-compose
+</code></pre></div><h5 id="_2-解压下载的zeebe-docker-compose-master-zip"><a href="#_2-解压下载的zeebe-docker-compose-master-zip" class="header-anchor">#</a> 2.解压下载的zeebe-docker-compose-master.zip</h5> <h5 id="_3-执行基于docker-compose-yml下载并创建相关组件容器"><a href="#_3-执行基于docker-compose-yml下载并创建相关组件容器" class="header-anchor">#</a> 3.执行基于docker-compose.yml下载并创建相关组件容器</h5> <div class="language- extra-class"><pre class="language-text"><code># change to directory of the profile to start, i.e
+# cd operate/
+docker-compose up
+</code></pre></div><blockquote><p>备注： docker-compose down 用来shutdown容器</p></blockquote> <p>例如：</p> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token punctuation">(</span>base<span class="token punctuation">)</span> MacBookPro:operate zhengr$ <span class="token function">docker-compose</span> up
+
+Pulling operate <span class="token punctuation">(</span>camunda/operate:1.0.0-alpha11<span class="token punctuation">)</span><span class="token punctuation">..</span>.
+
+<span class="token number">1.0</span>.0-alpha11: Pulling from camunda/operate
+
+6f2f362378c5: Pull complete
+
+494c27a8a6b8: Pull complete
+
+7596bb83081b: Pull complete
+
+1e739bce2743: Pull complete
+
+4dde2a90460d: Pull complete
+
+1f5b8585072c: Pull complete
+
+883cfe76ed71: Pull complete
+
+c025c61085ef: Pull complete
+
+b060cd7d08ce: Pull complete
+
+93da9e8063ec: Pull complete
+
+Pulling elasticsearch <span class="token punctuation">(</span>docker.elastic.co/elasticsearch/elasticsearch-oss:6.7.1<span class="token punctuation">)</span><span class="token punctuation">..</span>.
+
+<span class="token number">6.7</span>.1: Pulling from elasticsearch/elasticsearch-oss
+
+8ba884070f61: Pull complete
+
+2202e0dee1cc: Pull complete
+
+046487a6b47b: Pull complete
+
+2bf203bafcf4: Pull complete
+
+ecabf552c89a: Pull complete
+
+93123b7bf511: Pull complete
+
+2867102d5376: Pull complete
+
+Pulling zeebe <span class="token punctuation">(</span>camunda/zeebe:0.18.0<span class="token punctuation">)</span><span class="token punctuation">..</span>.
+
+<span class="token number">0.18</span>.0: Pulling from camunda/zeebe
+
+de8cd8ac2c2a: Pull complete
+
+62def3ffad8c: Pull complete
+
+1dafe0169f91: Pull complete
+
+f4521a1bc960: Pull complete
+
+0c2a2533a883: Pull complete
+
+dfd212cc6b74: Pull complete
+
+65e222ddee27: Pull complete
+
+ce1bf1781edd: Pull complete
+
+4c631900e34b: Pull complete
+
+55bebb03879a: Pull complete
+
+6b22452bf891: Pull complete
+
+8e4a1a2f6114: Pull complete
+
+Pulling kibana <span class="token punctuation">(</span>docker.elastic.co/kibana/kibana-oss:6.7.1<span class="token punctuation">)</span><span class="token punctuation">..</span>.
+
+<span class="token number">6.7</span>.1: Pulling from kibana/kibana-oss
+
+8ba884070f61: Already exists
+
+9de755da2607: Pull complete
+
+a530113b5366: Pull complete
+
+fcc058e5c07b: Pull complete
+
+b01d58af14f6: Pull complete
+
+74a53cb7bf61: Pull complete
+
+12a05e912a4b: Pull complete
+
+94203c8a1395: Pull complete
+
+Creating operate_kibana_1        <span class="token punctuation">..</span>. <span class="token keyword">done</span>
+
+Creating operate_elasticsearch_1 <span class="token punctuation">..</span>. <span class="token keyword">done</span>
+
+Creating operate_operate_1       <span class="token punctuation">..</span>. <span class="token keyword">done</span>
+
+Creating operate_zeebe_1         <span class="token punctuation">..</span>. <span class="token keyword">done</span>
+
+Attaching to operate_kibana_1, operate_operate_1, operate_elasticsearch_1, operate_zeebe_1
+</code></pre></div><blockquote><h5 id="备注"><a href="#备注" class="header-anchor">#</a> 备注：</h5> <ul><li><a href="https://github.com/zhengr/zeebe-docker-compose/blob/master/bin" target="_blank" rel="noopener noreferrer"><code>bin/zbctl*</code><span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a> - cli binary to interact with the broker</li></ul> <h5 id="服务-端口"><a href="#服务-端口" class="header-anchor">#</a> 服务 / 端口</h5> <p>我们启动的docker容器将提供如下服务:</p> <ul><li>Zeebe broker - port 26500</li> <li>Operate - web interface <a href="http://localhost:8080/" target="_blank" rel="noopener noreferrer">http://localhost:8080<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a> (login: demo/demo)</li> <li>ElasticSearch - port <a href="https://localhost:9200/" target="_blank" rel="noopener noreferrer">https://localhost:9200<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li> <li>Kibana - port <a href="https://localhost:5601/" target="_blank" rel="noopener noreferrer">https://localhost:5601<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li> <li>Simple Monitor - web interface <a href="http://localhost:8082/" target="_blank" rel="noopener noreferrer">http://localhost:8082<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></blockquote> <h5 id="_4-检查服务状态"><a href="#_4-检查服务状态" class="header-anchor">#</a> 4.检查服务状态</h5> <div class="language- extra-class"><pre class="language-text"><code>(base) MacBookPro:bin zhengr$ ./zbctl.darwin status
+
+Cluster size: 1
+
+Partitions count: 1
+
+Replication factor: 1
+
+Brokers:
+
+  Broker 0 - 172.18.0.5:26501
+
+​    Partition 1 : Leader
+</code></pre></div><p>以上容器部署完成后， Zeebe的服务框架就准备好了，接下来我们做范例流程部署。</p> <h2 id="流程部署"><a href="#流程部署" class="header-anchor">#</a> 流程部署</h2> <p>The <code>zbctl</code> binary is included to allow you to interact with the running broker. The binary is named:</p> <table><thead><tr><th>Operating System</th> <th>zbctl binary</th></tr></thead> <tbody><tr><td>Linux</td> <td>bin/zbctl</td></tr> <tr><td>OS X</td> <td>bin/zbctl.darwin</td></tr> <tr><td>Windows</td> <td>bin/zbctl.exe</td></tr></tbody></table> <div class="language- extra-class"><pre class="language-text"><code>cd zeebe-docker-compose
+bin/zbctl deploy ../path/to/your-file.bpmn
+</code></pre></div><p>这里我们用一个已经制作完成的BPMN文件部署测试。<strong>order-process.bpmn</strong></p> <p><img src="https://raw.githubusercontent.com/zhengr/zhengr.github.io/master/assets/images/order-process.png" alt="order-process"></p> <p>这个order-process.bpmn可以用<a href="https://github.com/zeebe-io/zeebe-modeler/releases" target="_blank" rel="noopener noreferrer">zeebe Modeler<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>可视化编排</p> <p><img src="https://raw.githubusercontent.com/zhengr/zhengr.github.io/master/assets/images/image-20190628115030145.png" alt="image-20190628115030145"></p> <div class="language- extra-class"><pre class="language-text"><code>(base) MacBookPro:bin zhengr$ ./zbctl.darwin deploy order-process.bpmn
+{
+  &quot;key&quot;: 2251799813685259,
+  &quot;workflows&quot;: [
+    {
+      &quot;bpmnProcessId&quot;: &quot;order-process&quot;,
+      &quot;version&quot;: 1,
+      &quot;workflowKey&quot;: 2251799813685251,
+      &quot;resourceName&quot;: &quot;order-process.bpmn&quot;
+    }
+  ]
+}
+</code></pre></div><h2 id="创建流程实例"><a href="#创建流程实例" class="header-anchor">#</a> 创建流程实例</h2> <div class="language- extra-class"><pre class="language-text"><code>./bin/zbctl create instance order-process --variables '{&quot;orderId&quot;: XXX}'
+</code></pre></div><p>例如：</p> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token punctuation">(</span>base<span class="token punctuation">)</span> MacBookPro:bin zhengr$ ./zbctl.darwin create instance order-process <span class="token parameter variable">--variables</span> <span class="token string">'{&quot;orderId&quot;: 45678}'</span>
+
+<span class="token punctuation">{</span>
+
+  <span class="token string">&quot;workflowKey&quot;</span><span class="token builtin class-name">:</span> <span class="token number">2251799813685258</span>,
+
+  <span class="token string">&quot;bpmnProcessId&quot;</span><span class="token builtin class-name">:</span> <span class="token string">&quot;order-process&quot;</span>,
+
+  <span class="token string">&quot;version&quot;</span><span class="token builtin class-name">:</span> <span class="token number">2</span>,
+
+  <span class="token string">&quot;workflowInstanceKey&quot;</span><span class="token builtin class-name">:</span> <span class="token number">2251799813685260</span>
+
+<span class="token punctuation">}</span>
+</code></pre></div><p>打开 http://localhost:8080 通过Operate检查部署实例情况：</p> <p><img src="https://raw.githubusercontent.com/zhengr/zhengr.github.io/master/assets/images/Jietu20190628-122341.jpg" alt="Jietu20190628-122341"></p> <p><img src="https://raw.githubusercontent.com/zhengr/zhengr.github.io/master/assets/images/image-20190628120128229.png" alt="image-20190628120128229"></p></div></div> <!----></div> <div class="footer" data-v-b93f0124><div class="footer-content page" data-v-b93f0124></div></div></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.c71e4f4f.js" defer></script><script src="/assets/js/11.66041a3d.js" defer></script><script src="/assets/js/4.8750ed51.js" defer></script><script src="/assets/js/8.12c4617f.js" defer></script><script src="/assets/js/43.906a9b9b.js" defer></script><script src="/assets/js/3.4c0f3db2.js" defer></script>
+  </body>
+</html>
