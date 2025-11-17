@@ -39,6 +39,10 @@ let mainConfig = {
     ],
     extraFooters: [
       {
+
+        title: "",
+        text: "",
+        link: ""
       }
     ],
     pageCount: false
