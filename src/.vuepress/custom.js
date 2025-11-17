@@ -35,7 +35,7 @@ let mainConfig = {
         link: "/"
       },
     ],
-    headTitle: ["用文字记录一生点滴那是多磨美好的事情！"],
+    headTitle: ["用文字记录一生点滴那是多么美好的事情！"],
     pageCount: false
   },
 
