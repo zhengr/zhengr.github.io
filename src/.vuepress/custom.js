@@ -24,8 +24,8 @@ let mainConfig = {
   base: "/",
 
   slogan: {
-    main: "有逻辑的灵魂，",
-    sub: "造就有温度的编码。"
+    main: "谨以此记念我的生活，",
+    sub: "虽然平凡，但这就是我的一生。"
   },
 
   themeConfig: {
@@ -35,7 +35,7 @@ let mainConfig = {
         link: "/"
       },
     ],
-    headTitle: ["如果能用文字记录一生点滴那是多磨美好的事情！"],
+    headTitle: ["用文字记录一生点滴那是多磨美好的事情！"],
     pageCount: false
   },
 
