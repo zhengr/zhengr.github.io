@@ -5,23 +5,23 @@
 let mainConfig = {
   vssueConfig: {
     owner: "zhengr",
-    repo: "Issue-Blog-With-Github-Action",
+    repo: "zhengr.github.io",
     clientId: "Ov23liMo07p92KjzONJp",
     clientSecret: "49b4a7a228802e8f6da792ba9af65f373977b98b"
   },
 
   repoConfig: {
     owner: "zhengr",
-    repo: "Issue-Blog-With-Github-Action",
+    repo: "zhengr.github.io",
     pushBranch: "master",
     email: "",
     filterUsers: ['zhengr']
   },
 
   title: "Robin's Blog",
-  description: "在这里了解我的一切，对编程的热爱永不停歇。",
-  customDomain: "",
-  base: "/Issue-Blog-With-Github-Action/",
+  description: "发现事情的乐趣，本身就是奖赏。",
+  customDomain: "blog.taoktao.com",
+  base: "/",
 
   slogan: {
     main: "有逻辑的灵魂，",
@@ -32,10 +32,10 @@ let mainConfig = {
     nav: [
       {
         name: "首页",
-        link: "/Issue-Blog-With-Github-Action"
+        link: "/"
       },
     ],
-    headTitle: ["暮春早夏的月亮", "原是情人的月亮，不比秋冬是诗人的月亮"],
+    headTitle: ["如果能用文字记录一生点滴那是多磨美好的事情！"],
     pageCount: false
   },
 
