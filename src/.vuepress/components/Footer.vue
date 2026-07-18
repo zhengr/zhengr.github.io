@@ -30,8 +30,8 @@ export default {
       year: new Date().getFullYear(),
       friendLinks: [],
       extraFooters: [],
-      brandName: '',
-      tagline: '',
+      brandName: (this.$site && this.$site.title) || 'Blog',
+      tagline: (this.$site && this.$site.description) || '',
       pvText: '0',
       showPv: false
     }

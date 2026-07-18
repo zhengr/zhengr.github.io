@@ -17,7 +17,7 @@
         <div class="hero-stats">
           <span class="stat"><strong>{{ totalPosts }}</strong>文章</span>
           <span class="dot-sep"></span>
-          <span class="stat"><strong>{{ categories.length - 1 }}</strong>个分类</span>
+          <span class="stat"><strong>{{ categoryCount }}</strong>个分类</span>
         </div>
       </div>
     </section>
@@ -67,6 +67,9 @@ export default {
     totalPosts () {
       const sum = (this.$frontmatter.categories || []).reduce((acc, c) => acc + (c.count || 0), 0)
       return sum
+    },
+    categoryCount () {
+      return (this.$frontmatter.categories || []).length
     },
     aboutText () {
       return this.$site.description || ''

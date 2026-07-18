@@ -31,7 +31,7 @@ export default {
       nav: [],
       headTitle: [],
       scrolled: false,
-      brandName: ''
+      brandName: (this.$site && this.$site.title) || 'Blog'
     }
   },
   mounted() {
