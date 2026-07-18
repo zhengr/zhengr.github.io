@@ -28,13 +28,18 @@ jobs:
     steps:
       - uses: pnpm/action-setup@v2
         with:
-          version: latest
+          version: 8
       - uses: actions/checkout@v3
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: pnpm
       - name: Download Issue and Publish
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          pnpm i
+          pnpm install --config.dangerously-allow-all-builds=true
           pnpm action
           pnpm build
           pnpm run deploy

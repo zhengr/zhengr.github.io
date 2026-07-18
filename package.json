@@ -15,6 +15,14 @@
     "shelljs": "^0.8.5",
     "simple-git": "^3.17.0"
   },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "esbuild",
+      "vuepress",
+      "core-js",
+      "highlight.js"
+    ]
+  },
   "scripts": {
     "dev": "vuepress dev ./src ",
     "local:build": "vuepress build ./src --dest ./dist ",
@@ -23,6 +31,6 @@
     "action": "cross-env NODE_ENV=action node ./tools/run.js",
     "push": "cross-env NODE_ENV=local node ./tools/deploy.js",
     "deploy": "cross-env NODE_ENV=action node ./tools/deploy.js",
-    "test-env": "cross-env custom={\\\"base\\\":\\\"/\\\"} vuepress dev ./src "
+    "test-env": "cross-env custom={\\\\\\\"base\\\\\\\":\\\\\\\"/\\\\\\\"} vuepress dev ./src "
   }
 }
