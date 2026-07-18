@@ -39,7 +39,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          pnpm install --config.dangerously-allow-all-builds=true
+          pnpm install --no-frozen-lockfile --config.dangerously-allow-all-builds=true
           pnpm action
           pnpm build
           pnpm run deploy
