@@ -1,26 +1,26 @@
 <template>
-<div>
+<div class="site">
   <Header />
-  <div class="page post-page">
-    <div class="title">
-      <div class="post-title">{{$page.title}}</div>
-    </div>
-
-    <div class="info">
-      <div class="author">{{$frontmatter.author}}</div>
-      <div class="date">{{$frontmatter.date}}</div>
-      <div class="count" v-if="$themeConfig.pageCount">
-        <span id="busuanzi_value_page_pv"></span>
-        <span>views</span>
+  <main class="page post-page">
+    <div class="post-head">
+      <h1 class="post-title">{{$page.title}}</h1>
+      <div class="info">
+        <span class="author"><svg viewBox="0 0 24 24" class="i"><circle cx="12" cy="8" r="3.2"/><path d="M5.5 19a6.5 6.5 0 0 1 13 0"/></svg>{{$frontmatter.author}}</span>
+        <span class="sep">·</span>
+        <span class="date"><svg viewBox="0 0 24 24" class="i"><rect x="3.5" y="5" width="17" height="15" rx="2.5"/><path d="M3.5 9.5h17M8 3.5v3.5M16 3.5v3.5"/></svg>{{$frontmatter.date}}</span>
+        <span class="count" v-if="$themeConfig.pageCount">
+          <svg viewBox="0 0 24 24" class="i"><path d="M2.5 12s3.5-6 9.5-6 9.5 6 9.5 6-3.5 6-9.5 6-9.5-6-9.5-6z"/><circle cx="12" cy="12" r="2.4"/></svg>
+          <span id="busuanzi_value_page_pv"></span>&nbsp;次阅读
+        </span>
       </div>
     </div>
 
-    <div class="post-content">
+    <article class="post-content">
       <Content />
-    </div>
+    </article>
 
     <Vssue title="Vssue Demo" :issueId="$frontmatter.id" />
-  </div>
+  </main>
   <Footer />
 </div>
 </template>
@@ -29,14 +29,7 @@
 import mediumZoom from 'medium-zoom'
 
 export default {
-  data() {
-    return {
-      zoom: null
-    }
-  },
-
   mounted() {
-    console.log(this.$page)
     this.zoom = mediumZoom('p img')
   }
 }
@@ -45,275 +38,272 @@ export default {
 <style lang="stylus">
 @import "../styles/fonts.styl"
 
-$mainColor = darken(red, 20)
+$mainColor = var(--c-accent)
+
+.site
+  min-height 100vh
+  display flex
+  flex-direction column
 
 .post-page
-  margin-bottom 50px
+  flex 1
+  margin-bottom 60px
 
-.title
-  display flex
-  justify-content center
+.post-head
+  text-align center
+  margin-top 5.5rem
+  margin-bottom 2.5rem
 
 .post-title
-  margin-top 120px
-  color #333
-  font-weight bold
-  font-size 30px
-  position relative
-  text-align center
-  max-width 80%
+  margin 0
+  color var(--c-body)
+  font-weight 700
+  font-size clamp(26px, 4vw, 38px)
+  line-height 1.25
+  letter-spacing -0.02em
 
-.post-title:before
-  content '“'
-  position absolute
-  font-size 55px
-  color #eee
-  left -60px
+.info
+  display flex
+  flex-wrap wrap
+  justify-content center
+  align-items center
+  gap 8px
+  margin-top 14px
+  color var(--c-body-muted)
+  font-size 13px
 
-.post-title:after
-  content '”'
-  position absolute
-  font-size 55px
-  color #eee
-  right -60px
+  .author, .date, .count
+    display inline-flex
+    align-items center
+    gap 5px
 
+  .i
+    width 14px
+    height 14px
+    fill none
+    stroke currentColor
+    stroke-width 1.6
+    stroke-linecap round
+    stroke-linejoin round
+
+  .sep
+    color var(--c-hairline-strong)
+
+// ---------------- Typography ----------------
 .post-content
   word-break break-word
+  font-size 16px
+  line-height 1.8
+  color var(--c-body)
 
-  .katex
-    font-size 16px
+  > *:first-child
+    margin-top 0
 
-a
-  font-weight 500
-  color $mainColor
-  text-decoration none
+  p
+    margin 1.1em 0
+    font-hei()
 
-p a code
-  font-weight 400
-  color $mainColor
+  strong
+    font-weight 700
+    color var(--c-body)
 
-p
-  font-song()
+  em
+    color var(--c-body-muted)
 
-kbd
-  background #eee
-  border solid 0.15rem #ddd
-  border-bottom solid 0.25rem #ddd
-  border-radius 0.15rem
-  padding 0 0.15em
-
-blockquote
-  font-size 1rem
-  color #999;
-  border-left .2rem solid #dfe2e5
-  margin 1rem 0
-  padding 5px 10px
-  background #eee
-
-  & > p
-    margin 0
-    font-fang-song()
-
-.post-content
-  ul, ol
-    padding-left 1.2em
-    font-fang-song()
-
-strong
-  font-weight 600
-
-h1, h2, h3, h4, h5, h6
-  font-weight 600
-  line-height 1.25
-  font-hei()
-  margin-top 50px
-
-  {$contentClass}:not(.custom) > &
-    margin-top (0.5rem - $navbarHeight)
-    padding-top ($navbarHeight + 1rem)
-    margin-bottom 0
-
-    &:first-child
-      margin-top -1.5rem
-      margin-bottom 1rem
-
-      + p, + pre, + .custom-block
-        margin-top 2rem
-
-  &:hover .header-anchor
-    opacity: 1
-
-h1
-  font-size 2.0rem
-  display none
-
-h2
-  font-size 1.45rem
-  padding-bottom .3rem
-
-h3
-  font-size 1.35rem
-
-a.header-anchor
-  font-size 0.85em
-  float left
-  margin-left -0.87em
-  padding-right 0.23em
-  margin-top 0.125em
-  opacity 0
-  color #ddd
-
-  &:hover
+  a
+    color var(--c-link)
+    font-weight 500
     text-decoration none
+    border-bottom 1px solid var(--c-accent-soft)
+    transition border-color .15s ease
+    &:hover
+      border-bottom-color var(--c-accent)
 
-code, kbd, .line-number
-  font-family source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace
+  h1, h2, h3, h4, h5, h6
+    font-weight 700
+    line-height 1.3
+    font-hei()
+    margin-top 2em
+    margin-bottom .6em
+    letter-spacing -0.01em
+    color var(--c-body)
+    &:hover .header-anchor
+      opacity 1
 
-pre
-  border 1px solid #000
+  h1
+    display none
+  h2
+    font-size 1.5rem
+    padding-bottom .4rem
+    border-bottom 1px solid var(--c-hairline)
+  h3
+    font-size 1.25rem
+  h4
+    font-size 1.1rem
 
-pre > code
-  background transparent
-  padding 0
-  margin 0
+  a.header-anchor
+    font-size .8em
+    float left
+    margin-left -.9em
+    padding-right .25em
+    margin-top .15em
+    opacity 0
+    color var(--c-body-faint)
+    &:hover
+      text-decoration none
+      color var(--c-accent)
 
-pre, code
-  font-size 14px
+  ul, ol
+    padding-left 1.4em
+    margin 1.1em 0
+    font-hei()
+    li
+      margin .4em 0
 
-code
-  background #eee
-  padding 2px 4px
-  margin 0 2px
-  border-radius 4px
+  kbd
+    background var(--c-bg-subtle)
+    border 1px solid var(--c-hairline-strong)
+    border-bottom-width 2px
+    border-radius 6px
+    padding 1px 6px
+    font-size .85em
 
-p, ul, ol
-  line-height 1.7
+  blockquote
+    margin 1.4em 0
+    padding .8em 1.2em
+    border-left 4px solid var(--c-quote-bar)
+    background var(--c-quote-bg)
+    border-radius 0 var(--radius) var(--radius) 0
+    color var(--c-body-muted)
+    & > p
+      margin .4em 0
+      font-fang-song()
+    & strong
+      color var(--c-body)
 
-li.task-list-item
-  list-style none
-  display flex
+  hr
+    border 0
+    border-top 1px solid var(--c-hairline)
+    margin 2.4em 0
 
-  input[type^=checkbox]
-    margin 7px 9px 0 -18px
+  // code
+  code, kbd, .line-number
+    font-family source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace
 
-hr
-  border 0
-  border-top 1px solid $borderColor
+  code
+    background var(--c-inline-code-bg)
+    color var(--c-inline-code-text)
+    padding 2px 6px
+    margin 0 1px
+    border-radius 6px
+    font-size .88em
 
-table
-  border-collapse collapse
-  margin 1rem 0
-  display: block
-  overflow-x: auto
-  white-space: nowrap
+  pre
+    border 1px solid var(--c-hairline)
+    border-radius var(--radius)
+    padding 16px 18px
+    overflow auto
+    background var(--c-code-bg)
+    box-shadow var(--c-card-shadow)
+    margin 1.4em 0
 
-tr
-  border-top 1px solid #dfe2e5
+  pre > code
+    background transparent
+    padding 0
+    margin 0
+    color var(--c-code-text)
+    font-size 13.5px
+    line-height 1.6
 
-  &:nth-child(2n)
-    background-color #f6f8fa
-
-th, td
-  border 1px solid #dfe2e5
-  padding .6em 1em
-
-img
-  max-width 720px
-  width 100%
-  margin auto
-  display block
-  border 1px solid rgba(0, 0, 0, 0.1)
-
-@media screen
-  .info
+  li.task-list-item
+    list-style none
     display flex
-    justify-content center
-    align-content center
-    margin 30px 0 60px 0
-    font-fang-song()
+    input[type^=checkbox]
+      margin 7px 9px 0 -18px
 
-    .author
-      margin 0 7px
+  // tables
+  table
+    border-collapse collapse
+    margin 1.5em 0
+    display block
+    overflow-x auto
+    width 100%
+    border 1px solid var(--c-hairline)
+    border-radius var(--radius)
+    font-size 14px
 
-    .date
-      margin 0 7px
+  th, td
+    border 1px solid var(--c-hairline)
+    padding .6em 1em
+    text-align left
 
-    .count
-      margin 0 7px
+  thead th
+    background var(--c-bg-subtle)
+    font-weight 700
 
-// comment
+  tr:nth-child(2n) td
+    background var(--c-table-stripe)
+
+  // images — nice framed container
+  img
+    max-width 100%
+    margin 1.6em auto
+    display block
+    border-radius var(--radius)
+    border 1px solid var(--c-hairline)
+    box-shadow var(--c-card-shadow)
+
+.katex
+  font-size 1.05em
+
+// ---------------- Comments ----------------
 .vssue
   font-hei()
-  margin-top 100px
-  padding 0
+  margin-top 3.5rem
+  max-width 760px
+  margin-left auto
+  margin-right auto
 
   .vssue-pagination-per-page,
   .vssue-header-powered-by,
   .vssue-pagination-page
     display none
-
   .vssue-new-comment
     border 0
-
   .vssue-current-user
     line-height 2.5
-
   .vssue-button-submit-comment:not(:disabled):hover
-    background-color #eee
-
+    background-color var(--c-bg-subtle)
   p
     font-hei()
 
-
+// ---------------- Responsive ----------------
 @media screen and (max-width 576px)
-  p
-    font-hei() // use font-hei on mobile devices
-
+  .post-head
+    margin-top 3rem
+  p, ul, ol
+    font-hei()
   .post-title
-    max-width 100%
-    overflow hidden
-    font-size 26px
-
+    font-size 24px
   .katex-display
     overflow-x scroll
     overflow-y hidden
 
-  .info
-    font-hei()
-    font-size 14px
-
 @media print
-  .page
-    width 100%
-
-  .title
-    margin-top 30%
+  .site
+    display block
+  .post-head
+    margin-top 10%
     font-kai()
     font-weight bold
-
-  .post-title:before, .post-title:after
-    content ''
-
   .info
-    text-align center
-    margin-top 40%
-    page-break-after always
     font-kai()
-
-    .author
-      font-size 20px
-      line-height 2
-
-  .count
-    display none
-
-  code
-    word-break break-all
-
-  pre
-    page-break-inside avoid
-
+    text-align center
+    page-break-after always
   .footer, .vssue
     display none
-
+  code
+    word-break break-all
+  pre
+    page-break-inside avoid
 </style>

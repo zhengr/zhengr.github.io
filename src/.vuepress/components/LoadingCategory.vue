@@ -1,67 +1,42 @@
 <template>
-<div class="loading-categories">
-  <div class="category loading-light" v-for="i in new Array(5)">
-    <div class="category-header">
-      <div class="category-name"></div>
-      <div class="category-count"></div>
+  <div class="loading-categories">
+    <div class="skel-card loading-light" v-for="i in new Array(5)" :key="i">
+      <div class="skel-head">
+        <div class="skel-name"></div>
+        <div class="skel-count"></div>
+      </div>
+      <div class="skel-desc"></div>
     </div>
-    <div class="category-desc"></div>
   </div>
-</div>
 </template>
 
 <style lang="stylus" scoped>
-@import "../styles/fonts.styl"
+.skel-card
+  padding 14px 16px
+  margin-bottom 10px
+  border 1px solid var(--c-hairline)
+  border-radius var(--radius)
+  background var(--c-card)
 
-.category
-  background white
-  font-size 14px
-  padding 20px 20px
-  padding-bottom 50px;
-  margin-bottom -30px
-  box-shadow 0 0 5px rgba(0, 0, 0, 0.1)
-  line-height 1
-  border-top-right-radius 10px
-  border-top-left-radius 10px
-  transform translateY(0px)
-  transition all ease .15s
-  font-weight bold
-  overflow hidden
-  color #000
+.skel-head
+  display flex
+  align-items center
+  justify-content space-between
 
-  .category-header
-    display flex
-    align-content center
-    justify-content space-between
-    position relative
-    .category-name, .category-count
-      height 20px
+.skel-name
+  width 50%
+  height 16px
+  background var(--c-bg-subtle)
 
-    .category-name
-      width 50%
-      background #eee
+.skel-count
+  width 26px
+  height 18px
+  background var(--c-bg-subtle)
+  border-radius 999px
 
-  .category-count
-    position absolute
-    right -20px
-    top -30px
-    background #eee
-    text-align center
-    width 40px
-    border-bottom-left-radius 10px
-    padding 20px 0 10px 0
-
-  .category-desc
-    margin-top 10px
-    font-size 12px
-    color #666
-    opacity 0.3
-    height 30px
-    background #eee
-
-.category:hover
-  transform translateY(-10px)
-  .category-desc
-    opacity 1
-
+.skel-desc
+  margin-top 8px
+  height 14px
+  width 80%
+  background var(--c-bg-subtle)
 </style>

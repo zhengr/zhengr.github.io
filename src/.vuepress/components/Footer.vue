@@ -1,8 +1,26 @@
 <template>
-  <div class="footer">
+  <footer class="site-footer">
     <div class="footer-content page">
+      <div class="footer-left">
+        <a :href="'/'" class="footer-brand">{{ brandName }}</a>
+        <p class="footer-tagline">{{ tagline }}</p>
+      </div>
+
+      <div class="footer-right">
+        <div class="links" v-if="friendLinks && friendLinks.length">
+          <a class="link" v-for="(l, i) in friendLinks" :key="i" :href="l.link" target="_blank" rel="noopener">{{ l.name }}</a>
+        </div>
+        <div class="extra-text" v-if="extraFooters && extraFooters.length">
+          <a class="extra-link" v-for="(e, i) in extraFooters" :key="i" :href="e.link || 'javascript:;'" v-if="e.link" target="_blank" rel="noopener">{{ e.text }}</a>
+          <span class="extra-link" v-for="(e, i) in (extraFooters || []).filter(x => !x.link)" :key="'t'+i">{{ e.text }}</span>
+        </div>
+        <div class="copyright">
+          © {{ year }} {{ brandName }}
+          <span class="pv" v-if="showPv"> · {{ pvText }} views</span>
+        </div>
+      </div>
     </div>
-  </div>
+  </footer>
 </template>
 
 <script>
@@ -12,150 +30,105 @@ export default {
       year: new Date().getFullYear(),
       friendLinks: [],
       extraFooters: [],
-      pvNumber: '00000',
-      uvNumber: '00000'
+      brandName: '',
+      tagline: '',
+      pvText: '0',
+      showPv: false
     }
   },
 
   mounted() {
-    this.friendLinks = this.$themeConfig.friendLinks
-    if (this.$themeConfig.extraFooters) {
-      this.extraFooters = this.$themeConfig.extraFooters
-    }
+    this.friendLinks = this.$themeConfig.friendLinks || []
+    this.extraFooters = this.$themeConfig.extraFooters || []
+    this.brandName = this.$site.title || 'Blog'
+    this.tagline = this.$site.description || ''
 
     const vueThis = this
     const pvDom = document.querySelector('#busuanzi_container_site_pv')
-    const observer = new MutationObserver(function (changes) {
-      const dom = changes[0].target
-      const pv = dom.firstChild.textContent
-      const uv = dom.lastChild.textContent
-      dom.style.display = 'none'
-      const total = Math.max(pv.length, uv.length, 6)
-      vueThis.pvNumber = new Array(total - pv.length).fill('0').join('') + pv
-      vueThis.uvNumber = new Array(total - uv.length).fill('0').join('') + uv
-    })
-
-    observer.observe(pvDom, {
-      attributes: true
-    })
+    if (pvDom) {
+      vueThis.showPv = true
+      const observer = new MutationObserver(function () {
+        const txt = (pvDom.textContent || '').replace(/[^0-9]/g, '')
+        vueThis.pvText = txt || '0'
+      })
+      observer.observe(pvDom, { childList: true, subtree: true, characterData: true })
+    }
   }
 }
 </script>
 
 <style lang="stylus" scoped>
-.footer
-  background #333
-  color #fff
-  .footer-content
-    padding 20px 0
+.site-footer
+  margin-top auto
+  border-top 1px solid var(--c-hairline)
+  background-color var(--c-bg-subtle)
+  color var(--c-body-muted)
+
+.footer-content
+  display flex
+  flex-wrap wrap
+  justify-content space-between
+  align-items flex-start
+  gap 24px
+  padding 36px 0 40px
+
+.footer-left
+  .footer-brand
+    font-size 16px
+    font-weight 700
+    color var(--c-body)
+    letter-spacing .01em
+  .footer-tagline
+    margin 8px 0 0
+    font-size 13px
+    color var(--c-body-faint)
+    max-width 320px
+    line-height 1.6
+
+.footer-right
+  text-align right
+  display flex
+  flex-direction column
+  gap 10px
+
+  .links
     display flex
     flex-wrap wrap
-    justify-content space-between
-    color rgba(255, 255, 255, 0.6)
-
-    .power
-      font-style normal
-
-    .logo
-      font-size 16px
-      padding 5px 10px
-      border 1px dashed #fff
-      display inline-block
-      margin-bottom 20px
-      color #fff
+    gap 4px 16px
+    justify-content flex-end
+    .link
+      font-size 13px
+      color var(--c-body-muted)
+      text-decoration none
+      transition color .15s ease
       &:hover
-        background-color #ffffff
-        color #000
+        color var(--c-accent)
 
-    .footer-title
-      color white
+  .extra-text
+    .extra-link
       font-size 12px
-      margin-bottom 5px
-      font-weight bolder
-      transform scaley(0.8)
-      text-shadow 1px 1px 1px rgba(0, 0, 0, 0.4)
+      color var(--c-body-faint)
+      text-decoration none
+      margin-left 12px
+      &:first-child
+        margin-left 0
+      &:hover
+        color var(--c-accent)
 
-    .footer-text
-      font-size 12px
-      margin-bottom 20px
-
-    .footer-count
-      font-size 12px
-      opacity 0
-      font-size 0px
-
-    .links
-      a.link
-        margin-right 20px
-        color rgba(255, 255, 255, 0.6)
-        margin-right 10px
-        text-decoration underline
-        &:hover
-          background-color #fff
-          color #000
-
-    .extra-text
-      .extra-link
-        color rgba(255, 255, 255, 0.6)
-        text-decoration: underline;
-        &:hover
-          background-color #fff
-          color #000
-
-.counter
-  margin-bottom 10px
-
-  .counter-title
-    color white
+  .copyright
     font-size 12px
-    margin-bottom 5px
-    font-weight bolder
-    transform scaley(0.8)
-    text-shadow 1px 1px 1px rgba(0, 0, 0, 0.4)
+    color var(--c-body-faint)
+    .pv
+      opacity .8
 
-
-  .counter-content
-    border-radius 2px
-    padding 5px 10px
-    background white
-    box-shadow inset 1px 2px 10px rgba(0, 0, 0, 0.6)
-    border-top 5px solid #444
-    border-bottom 5px solid #444
-    border-right 5px solid #555
-    border-left 5px solid rgba(0, 0, 0, 0.6)
-
-    .counter-number
-      display inline-block
-      padding 3px 5px
-      position relative
-      background #333
-      color white
-      border-radius 5px
-      min-width 10px
-      text-align center
-      margin-right 5px
-
-      &:last-child
-        margin: 0
-
-    for value in (1..20)
-      .counter-number:nth-last-child({value * 3})
-        margin-left 10px
-
-        &:before
-          content ''
-          width 2px
-          height 4px
-          background #333
-          position absolute
-          left -8px
-          bottom 7px
-          border-radius 4px
-
-    .counter-number:first-child
-      background-color darkred
-      margin-left 0
-
-      &:before
-        display none
+@media screen and (max-width $MQMobile)
+  .footer-content
+    flex-direction column
+    gap 18px
+  .footer-right
+    text-align left
+    .links
+      justify-content flex-start
+      .link
+        margin 0 16px 0 0
 </style>

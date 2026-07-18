@@ -27,6 +27,12 @@ module.exports = {
         async: true
       }
     ],
+    // anti-FOUC: apply theme as early as possible
+    [
+      "script",
+      {},
+      `;(function(){try{var k=localStorage.getItem('blog-theme');if(!k){k=window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';}document.documentElement.setAttribute('data-theme',k);}catch(e){}})();`
+    ],
     ...customConfig.head
   ],
 

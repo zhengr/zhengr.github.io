@@ -1,20 +1,47 @@
-// 颜色
-$accentColor = darken(red, 20)
-$textColor = #2c3e50
-$borderColor = #eeeeee
-$codeBgColor = #282c34
-$arrowBgColor = #ccc
-$badgeTipColor = #42b983
-$badgeWarningColor = darken(#ffe564, 35%)
-$badgeErrorColor = #DA5961
+// ============================================================
+// Modern palette — tokens via CSS variables for dark-mode support
+// ============================================================
+// Color tokens — exposed to runtime CSS as `--c-*` (see index.styl)
+$accentColor = #3b82f6
+$textColor = #1f2937
+$borderColor = #e5e7eb
+$codeBgColor = #0f172a
+$arrowBgColor = #94a3b8
+$badgeTipColor = #10b981
+$badgeWarningColor = #d97706
+$badgeErrorColor = #dc2626
 
-// 布局
-$navbarHeight = 3.6rem
+// Semantic (Stylus-level, used in templates)
+$primaryColor = #3b82f6
+$bodyColor = #1f2937
+$bodyColorMuted = #6b7280
+$hairline = #e5e7eb
+
+// Dark mode tokens (applied on [data-theme="dark"])
+$darkBodyColor = #e5e7eb
+$darkBodyColorMuted = #94a3b8
+$darkBg = #0b0f17
+$darkSurface = #111827
+$darkSurface2 = #1f2937
+$darkHairline = #1f2735
+$darkAccent = #60a5fa
+
+// Layout
+$navbarHeight = 4.2rem
 $sidebarWidth = 20rem
-$contentWidth = 740px
-$homePageWidth = 960px
+$contentWidth = 820px
+$homePageWidth = 1080px
 
-// 响应式变化点
+// Radius / shadow scale
+$radius-sm = 6px
+$radius = 10px
+$radius-lg = 16px
+$shadow-sm = 0 1px 2px rgba(15, 23, 42, 0.04), 0 1px 1px rgba(15, 23, 42, 0.03)
+$shadow = 0 4px 12px rgba(15, 23, 42, 0.06), 0 1px 2px rgba(15, 23, 42, 0.04)
+$shadow-md = 0 10px 25px rgba(15, 23, 42, 0.08), 0 4px 8px rgba(15, 23, 42, 0.05)
+$shadow-lg = 0 20px 40px rgba(15, 23, 42, 0.10), 0 8px 16px rgba(15, 23, 42, 0.06)
+
+// Breakpoints
 $MQNarrow = 959px
 $MQMobile = 719px
 $MQMobileNarrow = 576px

@@ -58,7 +58,7 @@ export default {
 
   .text
     font-size 20vh
-    color rgba(0, 0, 0, 0.4)
+    color rgba(125, 125, 125, 0.18)
     font-weight bolder
     width auto
     text-align center
@@ -68,21 +68,23 @@ export default {
     display flex
     justify-content center
     .button
-      border 1px solid rgba(0, 0, 0, 0.4)
-      padding 10px 20px
+      border 1px solid var(--c-accent)
+      padding 10px 22px
       cursor pointer
-      color #000
-      transition all ease .3s
+      color var(--c-accent)
+      border-radius 999px
+      font-hei()
+      font-weight 600
+      transition all ease .25s
 
       &:hover
-        background-color rgba(0, 0, 0, 0.4)
+        background-color var(--c-accent)
         border-color transparent
         color #fff
-        border-radius 100px
-        padding 10px 30px
+        padding 10px 32px
 
 .colors
-  width 200px
+  width 240px
   top 40%
   left 40%
   position absolute
@@ -91,11 +93,11 @@ export default {
 
   .color
     position absolute
-    height 50px
-    width 100px
-    filter blur(50px)
+    height 70px
+    width 140px
+    filter blur(60px)
 
-  colors = (#66f5b2 #e298dc #f03757 #e298dc #f03757)
+  colors = (#60a5fa #c084fc #f472b6 #c084fc #f472b6)
   n = 5
   h_n = (n + n % 2) / 2
   for i in (1..n)

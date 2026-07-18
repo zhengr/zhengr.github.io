@@ -110,13 +110,14 @@ export default {
 @import "../styles/fonts.styl"
 
 .cv-content
-  border 1px solid $borderColor
+  border 1px solid var(--c-hairline)
   padding 50px
   min-height 200px
   margin-top 5vh
   margin-bottom 5vh
   font-size 15px
   font-song()
+  border-radius var(--radius)
 
   .cv-two-column
     display flex
@@ -136,7 +137,7 @@ export default {
   .cv-info
     .cv-author
       font-hei()
-      color $accentColor
+      color var(--c-accent)
       font-size 2em
       font-weight bold
       margin-bottom 1.2em
@@ -173,7 +174,7 @@ export default {
       .cv-coding-title
         font-weight bold
       .cv-coding-link
-        color #000
+        color var(--c-body)
         text-decoration underline
         margin-right 5px
 

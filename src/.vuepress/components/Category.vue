@@ -1,19 +1,16 @@
 <template>
-  <a :href="link">
-    <div class="category">
-      <div class="category-header">
-        <div class="category-name">{{ name }}</div>
-        <div class="category-count">{{ count }}</div>
-      </div>
-      <div class="category-desc">{{ desc }}</div>
+  <a :href="link" class="category-card">
+    <div class="cat-head">
+      <span class="cat-name">{{ name }}</span>
+      <span class="cat-count">{{ count }}</span>
     </div>
+    <div class="cat-desc">{{ desc }}</div>
   </a>
 </template>
 
 <script>
 export default {
   name: 'Category',
-
   props: {
     name: String,
     count: Number,
@@ -26,47 +23,47 @@ export default {
 <style lang="stylus" scoped>
 @import "../styles/fonts.styl"
 
-.category
-  background white
+.category-card
+  display block
+  padding 14px 16px
+  margin-bottom 10px
+  border 1px solid var(--c-hairline)
+  border-radius var(--radius)
+  background var(--c-card)
+  color var(--c-body)
+  transition transform .18s ease, border-color .18s ease, box-shadow .18s ease
+
+.category-card:hover
+  transform translateY(-2px)
+  border-color var(--c-accent)
+  box-shadow var(--c-card-shadow)
+
+.cat-head
+  display flex
+  align-items center
+  justify-content space-between
+  gap 8px
+
+.cat-name
   font-size 14px
-  padding 20px 20px
-  padding-bottom 50px;
-  margin-bottom -30px
-  box-shadow 0 0 5px rgba(0, 0, 0, 0.1)
-  line-height 1
-  border-top-right-radius 10px
-  border-top-left-radius 10px
-  transform translateY(0px)
-  transition all ease .15s
-  font-weight bold
-  overflow hidden
-  color #000
+  font-weight 600
+  color var(--c-body)
+  letter-spacing .01em
 
-  .category-header
-    display flex
-    align-content center
-    justify-content space-between
-    position relative
+.cat-count
+  font-size 11px
+  font-weight 700
+  color var(--c-accent)
+  background var(--c-accent-soft)
+  padding 3px 8px
+  border-radius 999px
+  min-width 22px
+  text-align center
 
-  .category-count
-    position absolute
-    right -20px
-    top -30px
-    background #eee
-    text-align center
-    width 40px
-    border-bottom-left-radius 10px
-    padding 20px 0 10px 0
-
-  .category-desc
-    margin-top 10px
-    font-size 12px
-    color #666
-    opacity 0.3
-
-.category:hover
-  transform translateY(-10px)
-  .category-desc
-    opacity 1
-
+.cat-desc
+  margin-top 6px
+  font-size 12px
+  color var(--c-body-muted)
+  line-height 1.55
+  font-hei()
 </style>
